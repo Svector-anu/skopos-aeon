@@ -1,8 +1,8 @@
 {
     "version": "1.0",
-    "generated": "2026-05-29T15:40:00Z",
+    "generated": "2026-05-28T14:59:11Z",
     "repo": "aaronjmars/aeon",
-    "total": 171,
+    "total": 172,
     "categories": {
         "research": "Research & Content",
         "dev": "Dev & Code",
@@ -394,6 +394,18 @@
             "sha": "0000000",
             "updated": "2026-05-25",
             "install": "./add-skill aaronjmars/aeon ecosystem-pulse"
+        },
+        {
+            "slug": "liquidpad-launch",
+            "name": "LiquidPad Launch",
+            "description": "Emit a LiquidPad token deploy payload through the prefetch/postprocess shim pair. Routes 80% fees to deployer, 15% to LPAD burn, 5% to LIQ buyback, contract-enforced.",
+            "category": "crypto",
+            "schedule": "",
+            "var": "",
+            "files": 1,
+            "sha": "4f40f1c7",
+            "updated": "2026-05-28",
+            "install": "./add-skill aaronjmars/aeon liquidpad-launch"
         },
         {
             "slug": "sparkleware-catalog",
