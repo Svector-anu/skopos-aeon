@@ -6,13 +6,13 @@
     {
       "repo": "AntFleet/aeon-skills",
       "name": "AntFleet aeon-skills",
-      "description": "On-demand two-model-consensus PR review (Claude Opus + GPT) with on-chain USDC payment channel on Base. Pull-mode counterpart to AntFleet's auto-review GitHub App.",
+      "description": "On-demand two-model-consensus PR review with on-chain USDC payment on Base. Channel-rail variant for installed repos; x402-rail variant for public repos with pay-per-call USDC (v1 restricted to aeon-ecosystem callers).",
       "author": "AntFleet",
       "license": "MIT",
       "homepage": "https://www.antfleet.dev",
       "category": "dev",
       "trust_level": "trusted",
-      "skills": ["pr-review-antfleet"]
+      "skills": ["pr-review-antfleet", "pr-review-antfleet-x402"]
     },
     {
       "repo": "baseddevoloper/aeon-skill-pack-vvvkernel",
@@ -206,6 +206,18 @@
       "category": "messaging",
       "trust_level": "community",
       "skills": ["signa-message", "signa-inbox", "signa-discover", "signa-broadcast", "signa-delegate", "bankr-resolve", "bankr-launches", "gitlawb-stats", "miroshark-stats", "miroshark-fire"]
+    },
+    {
+      "repo": "mandateseal/mandateseal-guard",
+      "path": "aeon",
+      "name": "MandateSeal Guard",
+      "description": "Guard Aeon fund-moving skills with a MandateSeal mandate before each transfer (per-tx cap, chain/token allow-list, blocked recipients, human-approval queue) and a signed, Base-anchored receipt after — bounded, gated, provable.",
+      "author": "mandateseal",
+      "license": "MIT",
+      "homepage": "https://mandateseal.tech",
+      "category": "crypto",
+      "trust_level": "community",
+      "skills": ["distribute-tokens-guarded"]
     }
   ]
 }

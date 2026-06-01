@@ -28,6 +28,7 @@ These are the projects we know of that run Aeon, extend it, or integrate with th
 | Bean | [@minebean_](https://x.com/minebean_) |
 | Blue Agent | [@blueagent_](https://x.com/blueagent_) |
 | Capacitr | [@capacitr_](https://x.com/capacitr_) |
+| Careful Finance | [@ZorrotChen](https://x.com/ZorrotChen) · [carefulfinance.txzy.net](https://carefulfinance.txzy.net/) |
 | Claw Harbor | [@ClawHarbor](https://x.com/ClawHarbor) |
 | ClawBank | [@ClawBankHQ](https://x.com/ClawBankHQ) |
 | Clerk | [@clerk](https://x.com/clerk) |
@@ -36,6 +37,7 @@ These are the projects we know of that run Aeon, extend it, or integrate with th
 | GitBounty | [@Gitlawbounty](https://x.com/Gitlawbounty) |
 | GitKernal | [@gitkernal](https://x.com/gitkernal) |
 | Gitlawb Terminal | [@Gitlawbterminal](https://x.com/Gitlawbterminal) |
+| Hound Flow | [@HoundFlow_](https://x.com/HoundFlow_) · [houndflow.com](https://houndflow.com) |
 | LawbWorld | [@LawbWorld](https://x.com/LawbWorld) |
 | LiquidPad | [@LiquidPadBot](https://x.com/LiquidPadBot) · [liquidpad.site](https://www.liquidpad.site) |
 | Liq | [@_proxystudio](https://x.com/_proxystudio) |

@@ -17,7 +17,7 @@
 </p>
 
 <p align="center">
-  <img src="assets/aeonframework.gif" alt="Aeon Demo" />
+  <img src="assets/aeon-demo.gif" alt="Aeon Demo" />
 </p>
 
 ---
@@ -45,7 +45,7 @@ This isn't better for everything — you still want Claude Code for writing code
 
 For a comparison against the broader agent ecosystem (AutoGen, CrewAI, n8n, LangGraph) and a list of active forks running in production, see [`SHOWCASE.md`](SHOWCASE.md). For products and agents built on top of Aeon, see [`ECOSYSTEM.md`](ECOSYSTEM.md).
 
-![Autonomy spectrum](./assets/autonomy.jpg)
+![Autonomy spectrum](./assets/autonomy-aeon.jpg)
 
 ---
 
@@ -94,7 +94,7 @@ The gate also rejects state-changing requests (POST / PUT / PATCH / DELETE) whos
 
 ## Skills
 
-![Skills](./assets/skills-156.jpg)
+![Skills](./assets/skills-aeon.jpg)
 
 156 skills, grouped by what they do. Every skill is independently installable, schedulable, and chainable.
 
@@ -175,7 +175,7 @@ Every skill reads `CLAUDE.md`, so identity propagates automatically.
 
 ## Quality scoring & self-healing
 
-![Anatomy of a skill run](./assets/skill-run.jpg)
+![Anatomy of a skill run](./assets/skill-run-aeon.jpg)
 
 Every skill output is automatically scored 1–5 by Haiku after each run (failed/empty → 1, excellent → 5). Scores and flags (`api_error`, `stale_data`, `rate_limited`) are tracked per skill in `memory/skill-health/` with a rolling 30-run history.
 
@@ -183,7 +183,7 @@ Every skill output is automatically scored 1–5 by Haiku after each run (failed
 
 ### Self-healing loop
 
-![Self-healing architecture](./assets/architecture.jpg)
+![Self-healing architecture](./assets/architecture-aeon.jpg)
 
 1. **`heartbeat`** (3x daily) — detects failed, stuck, or chronically broken skills
 2. **`skill-health`** — audits quality scores and flags API degradation patterns
@@ -210,7 +210,7 @@ Every run logs token usage to `memory/token-usage.csv`. The `cost-report` skill 
 
 ## Configuration
 
-![Aeon never sleeps — a full day of autonomous runs](./assets/never-sleeps.jpg)
+![Aeon never sleeps — a full day of autonomous runs](./assets/never-sleeps-aeon.jpg)
 
 All scheduling lives in `aeon.yml`:
 
@@ -303,7 +303,7 @@ Claude only installs and runs when a skill actually matches.
 
 ## Project structure
 
-![The Stack](./assets/stack.jpg)
+![The Stack](./assets/stack-aeon.jpg)
 
 ```
 CLAUDE.md                ← agent identity (auto-loaded by Claude Code)
@@ -353,7 +353,7 @@ scripts/
 
 ## GitHub Actions cost
 
-![Basically free — runs on your existing Claude subscription and a free GitHub account](./assets/free.jpg)
+![Basically free — runs on your existing Claude subscription and a free GitHub account](./assets/free-aeon.jpg)
 
 | Scenario | Cost |
 |----------|------|
@@ -445,7 +445,7 @@ Label any GitHub issue `ai-build` → workflow fires → Claude reads the issue,
 
 ## Community skill packs
 
-![Aeon Framework ecosystem map](./assets/ecosystem.jpg)
+![Aeon Framework ecosystem map](./assets/ecosystem-aeon.jpg)
 
 Third-party skill collections that live in their own repos. Aeon doesn't ship them in the core catalog, but they install as one bundle via [`./install-skill-pack`](install-skill-pack):
 
@@ -463,7 +463,7 @@ To browse known packs without installing, run `./install-skill-pack --list` — 
 | [luca-aeon-skills](https://github.com/danbuildss/luca-aeon-skills) | 4 | Financial intelligence via x402Books AI — wallet scanning, treasury monitoring, financial reports, and agent registry on Base |
 | [zer0-skill-pack](https://github.com/0xShak/zer0-skill-pack) | 6 | Polymarket intelligence — daily thesis, mispricing scanner, contrarian fades, narrative-vs-markets, paper-trade PnL journal, alpha comment curator |
 | [gitbounty-skill-pack](https://github.com/gitlawbounty/gitbounty-skill-pack) | 1 | Bounty hunting on the gitlawb network via gitbounty — discover open bounties, scout the best fit with the gitbounty LLM scout, draft a solution plan (read-only) |
-| [aeon-skills](https://github.com/AntFleet/aeon-skills) | 1 | Two-model-consensus PR review (Opus 4.7 + GPT-5) — per-review USDC drawdown on Base |
+| [aeon-skills](https://github.com/AntFleet/aeon-skills) | 2 | Two-model-consensus PR review (Opus 4.7 + GPT-5) — channel drawdown for installed repos, x402 pay-per-call for public repos |
 | [aeon-skill-pack-liquidpad](https://github.com/liquidpadbot/aeon-skill-pack-liquidpad) | 4 | Track LiquidPad on Base — burn cycle alerts, new token launches with onchain provenance, daily protocol digest, and fee accrual tracking |
 | [aeon-skill-pack-mythosforge](https://github.com/ryjin111/aeon-skill-pack-mythosforge) | 5 | Read-only MythosForge monitoring — ops/backlog/jury/payout health, proof-of-creation integrity on Base, theme/round guard against silent relabels, jury-drift detection, and live gallery/proof-page QA |
 | [demo-pack](https://github.com/sparkleware/demo-pack) | 1 | Holographic demo skill — proves the Sparkleware registry install pipeline works |
@@ -662,7 +662,7 @@ Aeon runs on GitHub Actions with zero infrastructure needed. After pushing your 
 
 ### What is the autonomy spectrum?
 
-See `assets/autonomy.jpg`. Aeon sits at the "fully autonomous" end — it decides when to run, what to check, and when to notify you. Other tools require approval loops and babysitting.
+See `assets/autonomy-aeon.jpg`. Aeon sits at the "fully autonomous" end — it decides when to run, what to check, and when to notify you. Other tools require approval loops and babysitting.
 
 ### Troubleshooting
 

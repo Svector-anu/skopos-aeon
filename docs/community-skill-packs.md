@@ -19,6 +19,10 @@ This page documents the **install protocol** — the `skills-pack.json` manifest
 
 Prints every pack declared in `skill-packs.json` (at the Aeon repo root) — repo, skill count, trust badge, one-line description. Trusted-source packs are marked with `*` (security scan skipped, format check still runs). The script reads the local `skill-packs.json` when present and falls back to fetching the file from `https://raw.githubusercontent.com/aaronjmars/aeon/main/skill-packs.json` when it isn't.
 
+Trusted AntFleet packs currently expose both `pr-review-antfleet` for
+installed repos with channel drawdown and `pr-review-antfleet-x402` for
+public repos with x402 pay-per-call USDC.
+
 ## One-command install
 
 ```bash

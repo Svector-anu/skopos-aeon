@@ -83,7 +83,9 @@ The taxonomy is intentionally narrow. New values must:
 
 1. Cover a **distinct** blast radius — something an operator would weigh differently from the existing six.
 2. Apply to **multiple** skills, current or planned. One-off cases stay inside `external_api`.
-3. Land in **one PR** that updates: this file, the `skills-pack.json` schema reference, and the `install-skill-pack` allow-list constant. PRs that add a capability without one of those three pieces will be sent back.
+3. Land in **one PR** that updates: this file, the `skills-pack.json` schema reference, and the `install-skill-pack` allow-list constant (both the `ALLOWED_CAPABILITIES` array and the header comment that cites the same values). PRs that add a capability without one of those three pieces will be sent back.
+
+The `ci-capabilities-parity` workflow (`.github/workflows/ci-capabilities-parity.yml`) runs on every PR that touches either file and fails the check when the three places disagree — so a half-PR can't merge silently. Run the same check locally with `bash scripts/check-capabilities-parity.sh`.
 
 Closing a capability (deprecating a value) follows the same protocol in reverse — open a PR that migrates every existing pack first, then removes the value from the allow-list and this file in a follow-up.
 

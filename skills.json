@@ -1,8 +1,8 @@
 {
     "version": "1.0",
-    "generated": "2026-05-28T14:59:11Z",
+    "generated": "2026-05-29T17:40:44Z",
     "repo": "aaronjmars/aeon",
-    "total": 172,
+    "total": 179,
     "categories": {
         "research": "Research & Content",
         "dev": "Dev & Code",
@@ -386,7 +386,7 @@
         {
             "slug": "ecosystem-pulse",
             "name": "ecosystem-pulse",
-            "description": "Weekly liveness check of the projects listed in ECOSYSTEM.md — stars/forks/last-commit recency + new releases for any project that can be matched to a GitHub repo",
+            "description": "Weekly liveness check of the projects listed in ECOSYSTEM.md \u2014 stars/forks/last-commit recency + new releases for any project that can be matched to a GitHub repo",
             "category": "research",
             "schedule": "0 11 * * 1",
             "var": "",
@@ -396,21 +396,9 @@
             "install": "./add-skill aaronjmars/aeon ecosystem-pulse"
         },
         {
-            "slug": "liquidpad-launch",
-            "name": "LiquidPad Launch",
-            "description": "Emit a LiquidPad token deploy payload through the prefetch/postprocess shim pair. Routes 80% fees to deployer, 15% to LPAD burn, 5% to LIQ buyback, contract-enforced.",
-            "category": "crypto",
-            "schedule": "",
-            "var": "",
-            "files": 1,
-            "sha": "4f40f1c7",
-            "updated": "2026-05-28",
-            "install": "./add-skill aaronjmars/aeon liquidpad-launch"
-        },
-        {
             "slug": "sparkleware-catalog",
             "name": "sparkleware-catalog",
-            "description": "Weekly enriched export of skill-packs.json — joins the canonical community registry to live GitHub signals (stars, last-push, live manifest skill count) and writes a machine-readable skill-packs-catalog.json that external tools (e.g. Sparkleware) can consume without screen-scraping",
+            "description": "Weekly enriched export of skill-packs.json \u2014 joins the canonical community registry to live GitHub signals (stars, last-push, live manifest skill count) and writes a machine-readable skill-packs-catalog.json that external tools (e.g. Sparkleware) can consume without screen-scraping",
             "category": "dev",
             "schedule": "0 9 * * 2",
             "var": "",
@@ -614,7 +602,7 @@
         {
             "slug": "fleet-skill-adoption",
             "name": "fleet-skill-adoption",
-            "description": "Weekly fleet skill-adoption leaderboard — per-slug count of how many POWER+ACTIVE forks have each upstream skill enabled, top-15 most-adopted and bottom-15 least-adopted by fleet penetration, silent when nothing moves",
+            "description": "Weekly fleet skill-adoption leaderboard \u2014 per-slug count of how many POWER+ACTIVE forks have each upstream skill enabled, top-15 most-adopted and bottom-15 least-adopted by fleet penetration, silent when nothing moves",
             "category": "dev",
             "schedule": "0 22 * * 0",
             "var": "",
@@ -2074,6 +2062,102 @@
             "sha": "0000000",
             "updated": "2026-05-29",
             "install": "./add-skill aaronjmars/aeon fleet-scorecard"
+        },
+        {
+            "slug": "approval-audit",
+            "name": "Approval Audit",
+            "description": "List a wallet's live ERC-20 token approvals on Base and flag unlimited / risky spender grants. Keyless via Base RPC (eth_getLogs + eth_call) \u2014 no explorer key needed.",
+            "category": "crypto",
+            "schedule": "workflow_dispatch",
+            "var": "",
+            "files": 0,
+            "sha": "",
+            "updated": "",
+            "install": "./add-skill aaronjmars/aeon approval-audit"
+        },
+        {
+            "slug": "honeypot-check",
+            "name": "Honeypot Check",
+            "description": "Detect un-sellable / restricted (honeypot) tokens on Base by simulating a real holder's sell via eth_call. Keyless \u2014 no explorer key needed.",
+            "category": "crypto",
+            "schedule": "workflow_dispatch",
+            "var": "",
+            "files": 0,
+            "sha": "",
+            "updated": "",
+            "install": "./add-skill aaronjmars/aeon honeypot-check"
+        },
+        {
+            "slug": "lp-lock-check",
+            "name": "LP Lock Check",
+            "description": "Resolve a token's main liquidity pool on Base and classify whether its LP is burned/locked or removable (rug-pull risk). Keyless \u2014 no explorer key needed.",
+            "category": "crypto",
+            "schedule": "workflow_dispatch",
+            "var": "",
+            "files": 0,
+            "sha": "",
+            "updated": "",
+            "install": "./add-skill aaronjmars/aeon lp-lock-check"
+        },
+        {
+            "slug": "linked-wallets",
+            "name": "Linked Wallets",
+            "description": "Cluster addresses likely controlled by the same entity on Base via shared-funder and co-spend heuristics. Keyless \u2014 no explorer key needed.",
+            "category": "crypto",
+            "schedule": "workflow_dispatch",
+            "var": "",
+            "files": 0,
+            "sha": "",
+            "updated": "",
+            "install": "./add-skill aaronjmars/aeon linked-wallets"
+        },
+        {
+            "slug": "fund-flow",
+            "name": "Fund Flow",
+            "description": "Trace where funds move to (or came from) across multiple hops from a Base address and render a Mermaid flow graph. Keyless \u2014 no explorer key needed.",
+            "category": "crypto",
+            "schedule": "workflow_dispatch",
+            "var": "",
+            "files": 0,
+            "sha": "",
+            "updated": "",
+            "install": "./add-skill aaronjmars/aeon fund-flow"
+        },
+        {
+            "slug": "investigation-report",
+            "name": "Investigation Report",
+            "description": "One-shot composite investigation of a Base token \u2014 runs rug-scan, contract-audit, deployer-trace and holder-concentration and merges them into a single report with an at-a-glance verdict. Keyless core; a Basescan key deepens it.",
+            "category": "crypto",
+            "schedule": "workflow_dispatch",
+            "var": "",
+            "files": 0,
+            "sha": "",
+            "updated": "",
+            "install": "./add-skill aaronjmars/aeon investigation-report"
+        },
+        {
+            "slug": "capabilities-map",
+            "name": "capabilities-map",
+            "description": "Weekly read-only audit of installed skills' capability coverage \u2014 maps every enabled/disabled skill against the locked 6-value taxonomy in docs/CAPABILITIES.md, flags any capability tier with zero enabled coverage as an actionable gap",
+            "category": "dev",
+            "schedule": "30 11 * * 1",
+            "var": "",
+            "files": 0,
+            "sha": "",
+            "updated": "2026-06-01",
+            "install": "./add-skill aaronjmars/aeon capabilities-map"
+        },
+        {
+            "slug": "liquidpad-launch",
+            "name": "LiquidPad Launch",
+            "description": "Emit a LiquidPad token deploy payload through the prefetch/postprocess shim pair. Routes 80% fees to deployer, 15% to LPAD burn, 5% to LIQ buyback, contract-enforced.",
+            "category": "crypto",
+            "schedule": "",
+            "var": "",
+            "files": 1,
+            "sha": "4f40f1c7",
+            "updated": "2026-05-28",
+            "install": "./add-skill aaronjmars/aeon liquidpad-launch"
         }
     ],
     "install_all": "./add-skill aaronjmars/aeon --all",
