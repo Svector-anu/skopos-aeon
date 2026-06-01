@@ -56,6 +56,43 @@ If DexScreener fails, continue with GT only (`ds=fail` in footer). Never abort o
 
 **Low-liquidity pair addendum:** the 3% deviation threshold above is calibrated for liquid pairs. On thin pairs it produces false `ds=divergent` flags from harmless tick noise. **If the pair's 24h volume is below $100k, raise the DS deviation threshold to 10% instead of 3%** before flagging `ds=divergent`. The deep-pool-wins rule still applies when the larger threshold is exceeded.
 
+### 2b. Treasury wallets (on-chain liquidity)
+
+If `.x402books/wallets.json` exists at the repo root, fetch native-ETH balance for each entry on Base. This file declares the project's protocol wallets (treasury, deployer, etc.) and was introduced 2026-05-29 — before this skill knew its own bank balance.
+
+```bash
+WALLETS_FILE=".x402books/wallets.json"
+[ -f "$WALLETS_FILE" ] && jq -c '.wallets[] | select(.chain=="base")' "$WALLETS_FILE" > /tmp/treasury-wallets.jsonl
+```
+
+For each wallet line, query Base in this fallback order:
+
+1. **BaseScan (primary, no key required for low rate):**
+   ```bash
+   curl -s "https://api.basescan.org/api?module=account&action=balance&address=ADDRESS&tag=latest"
+   ```
+   Response is JSON `{"status":"1","result":"<wei>"}`. Convert wei → ETH by dividing by 1e18. If `status != "1"` or the result is non-numeric, mark this wallet `eth=fetch_fail` and continue.
+
+2. **Alchemy (secondary, only if `ALCHEMY_API_KEY` is set AND BaseScan failed):**
+   ```bash
+   curl -s -X POST "https://base-mainnet.g.alchemy.com/v2/$ALCHEMY_API_KEY" \
+     -H "Content-Type: application/json" \
+     -d '{"jsonrpc":"2.0","id":1,"method":"eth_getBalance","params":["ADDRESS","latest"]}'
+   ```
+   Response is JSON-RPC `{"jsonrpc":"2.0","id":1,"result":"0x<hex_wei>"}`. Convert hex → decimal → ÷1e18.
+
+3. **WebFetch fallback** (sandbox block on either curl): retry the same URL with **WebFetch** before declaring `fetch_fail`.
+
+Compute, per wallet:
+- `eth_balance` — decimal ETH, 4 decimals.
+- `eth_balance_delta_24h` — diff vs yesterday's `TREASURY_STATE:` log line (omit when prior is missing).
+
+Aggregate:
+- `treasury_eth_total` — sum across **role=treasury** wallets only (deployer wallets are operational, not protocol funds).
+- `treasury_low_alert` — `true` if `treasury_eth_total < 0.01` AND `treasury_eth_total > 0` (a zero balance is a config error, not a depletion; do not alarm).
+
+If `.x402books/wallets.json` is missing or contains no `chain=base` entries, set `treasury=skip` in the sources footer and OMIT the Treasury subsection from the article + notification. Do not invent the section.
+
 ### 3. Compute true deltas
 
 From the `TOKEN_REPORT_STATE:` key=value lines in prior logs, load:
@@ -114,6 +151,14 @@ Save to `articles/token-report-${today}.md`:
 - **7d:** ±X.X% ([one phrase: rallying, range-bound, rolling over, etc.])
 - **30d:** ±X.X% ([one phrase])
 
+## Treasury
+[Include ONLY if step 2b returned at least one wallet with a real balance. One row per wallet, role-sorted (treasury first, then deployer, then other). If `treasury_low_alert` is true, lead the section with one sentence naming the floor that was crossed.]
+
+| Wallet | Role | ETH | 24h Δ |
+|--------|------|-----|-------|
+| 0xf1e9…158e | treasury | X.XXXX | ±Y.YY |
+| 0x6797…e3a2 | deployer | X.XXXX | ±Y.YY |
+
 ## What changed
 [2–4 sentences. Name the specific deltas that matter and the verdict they produced. If whale trades exist, list the top 3 as `buy $1.2K @ $0.0042 · 11:03 UTC`. If liquidity moved >5%, name the pool and the $ amount. Tie every sentence back to the verdict. No filler.]
 
@@ -126,7 +171,7 @@ Save to `articles/token-report-${today}.md`:
 ---
 *Chart: https://www.geckoterminal.com/base/pools/POOL_ADDRESS*
 *Contract: CONTRACT_ADDRESS | Chain: Base*
-*Sources: gt=ok · ds=[ok|fail|divergent] · xai=[ok|skip|fail]*
+*Sources: gt=ok · ds=[ok|fail|divergent] · xai=[ok|skip|fail] · treasury=[ok|skip|fetch_fail]*
 ```
 
 **Section discipline:**
@@ -163,12 +208,15 @@ Append to `memory/logs/${today}.md`:
 ### token-report
 - Verdict: [LABEL]
 - TOKEN_REPORT_STATE: price=X.XXXX liquidity=XXXX.XX volume_24h=XXXX.XX buys=N sells=N whales=N pool=POOL_ADDRESS
+- TREASURY_STATE: treasury_eth_total=X.XXXX wallets=N (one TREASURY_WALLET_STATE line per wallet below)
+- TREASURY_WALLET_STATE: addr=0xf1e9…158e role=treasury eth=X.XXXX
+- TREASURY_WALLET_STATE: addr=0x6797…e3a2 role=deployer eth=X.XXXX
 - 24h: ±X.X% | 7d: ±X.X% | 30d: ±X.X%
 - Article: articles/token-report-${today}.md
-- Sources: gt=ok ds=[ok|fail|divergent] xai=[ok|skip|fail]
+- Sources: gt=ok ds=[ok|fail|divergent] xai=[ok|skip|fail] treasury=[ok|skip|fetch_fail]
 ```
 
-The `TOKEN_REPORT_STATE:` line is a contract — step 3 of the next run parses it with a key=value split. Keep the keys, order, and numeric formats stable. No currency symbols, no thousands separators.
+The `TOKEN_REPORT_STATE:` line is a contract — step 3 of the next run parses it with a key=value split. Keep the keys, order, and numeric formats stable. No currency symbols, no thousands separators. The `TREASURY_WALLET_STATE:` lines (one per fetched wallet) feed step 2b's 24h delta — parse them with the same key=value split, keyed on `addr`. Omit `TREASURY_STATE` and `TREASURY_WALLET_STATE` lines entirely on `treasury=skip` runs so a wallets.json that disappears later doesn't leave stale balances in the log.
 
 ### 9. Notify
 
@@ -181,18 +229,29 @@ Lead with the verdict, not raw numbers. One short paragraph plus metrics.
 
 Price $X.XXXX (±Y.Y% 24h) | Liq $X.XK (±Z.Z%) | Vol $X.XK (W.W× 7d)
 Buys/Sells X/Y (ratio Z.ZZ) | Whales: N
+Treasury: X.XXXX ETH (±Y.YY 24h)
 
 Chart: https://www.geckoterminal.com/base/pools/POOL_ADDRESS
 ```
 
+The `Treasury:` line is included ONLY when step 2b populated treasury_eth_total > 0. Omit the line entirely on `treasury=skip` / `treasury=fetch_fail` runs — silence beats a misleading number.
+
 **Skip rules:**
 - `TOKEN_REPORT_NO_DATA` (step 1 bailout): log only, **no notification, no article**.
-- `QUIET` verdict with whales=0 AND abs(Δprice 24h) <1%: send a single-line notification `$TOKEN quiet — $X.XXXX flat, vol $X.XK.` (no table). This confirms the skill ran without pinging channels with filler on dead days.
+- `QUIET` verdict with whales=0 AND abs(Δprice 24h) <1%: send a single-line notification `$TOKEN quiet — $X.XXXX flat, vol $X.XK.` (no table). This confirms the skill ran without pinging channels with filler on dead days. **Exception:** if `treasury_low_alert` is true, override QUIET and send the full notification with a leading `*Treasury gas reserve low — X.XXXX ETH on treasury, floor 0.01 ETH.*` line. A token going quiet on a day when the agent can no longer pay for gas is the exact regime where the operator needs to see it.
 - Any other verdict: full notification above.
+
+**Treasury alert (independent of verdict):** if `treasury_low_alert` is true on any run, prepend this line to the notification body — even on QUIET, even on CONSOLIDATING:
+
+```
+⚠️ *Treasury gas reserve low — X.XXXX ETH on treasury (floor 0.01 ETH).*
+```
 
 ## Sandbox note
 
-The sandbox may block outbound curl. For any URL fetch that fails, retry with **WebFetch** as a fallback — GeckoTerminal, DexScreener, and api.x.ai are all public or token-auth'd via header, so no pre-fetch / post-process plumbing is needed.
+The sandbox may block outbound curl. For any URL fetch that fails, retry with **WebFetch** as a fallback — GeckoTerminal, DexScreener, BaseScan, and api.x.ai are all public or token-auth'd via header, so no pre-fetch / post-process plumbing is needed.
+
+The Alchemy fallback in step 2b uses `$ALCHEMY_API_KEY` in the URL path (not in a header), so curl envvar expansion is safe here. If Alchemy is unset, skip silently — BaseScan + WebFetch are enough.
 
 ## Constraints
 
@@ -201,3 +260,6 @@ The sandbox may block outbound curl. For any URL fetch that fails, retry with **
 - Verdict must come from the step-4 table — no freelance labels.
 - On `TOKEN_REPORT_NO_DATA`, exit silently. No notification about the failure.
 - Preserve the `TOKEN_REPORT_STATE:` log line schema — tomorrow's run depends on it.
+- Preserve the `TREASURY_WALLET_STATE:` log line schema (one line per fetched wallet, keyed on `addr`) — step 2b's 24h delta depends on it.
+- A treasury fetch failure is not a token-report failure. On `treasury=fetch_fail`, omit the Treasury subsection + notification line but still write the full token report — the token data is the primary product, treasury is an annotation.
+- Wallets with `role` outside {`treasury`, `deployer`} appear in the article table sorted last under "other"; only `role=treasury` wallets count toward `treasury_eth_total` and the low-balance alert.
