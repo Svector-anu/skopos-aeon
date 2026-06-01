@@ -206,6 +206,18 @@
       "category": "messaging",
       "trust_level": "community",
       "skills": ["signa-message", "signa-inbox", "signa-discover", "signa-broadcast", "signa-delegate", "bankr-resolve", "bankr-launches", "gitlawb-stats", "miroshark-stats", "miroshark-fire"]
+    },
+    {
+      "repo": "mandateseal/mandateseal-guard",
+      "path": "aeon",
+      "name": "MandateSeal Guard",
+      "description": "Guard Aeon fund-moving skills with a MandateSeal mandate before each transfer (per-tx cap, chain/token allow-list, blocked recipients, human-approval queue) and a signed, Base-anchored receipt after — bounded, gated, provable.",
+      "author": "mandateseal",
+      "license": "MIT",
+      "homepage": "https://mandateseal.tech",
+      "category": "crypto",
+      "trust_level": "community",
+      "skills": ["distribute-tokens-guarded"]
     }
   ]
 }
