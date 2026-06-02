@@ -3,6 +3,7 @@ name: token-report
 description: Daily price performance report for the project's token — price, volume, liquidity, and context
 var: ""
 tags: [crypto]
+capabilities: [external_api]
 ---
 <!-- autoresearch: variation B — verdict-first template, threshold-based classification, true deltas from persistent STATE log, skip-when-empty sections -->
 
