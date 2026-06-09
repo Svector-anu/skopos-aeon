@@ -13,6 +13,7 @@ interface McpPanelProps {
   loading: boolean
   saving: boolean
   secrets: Secret[]
+  busy: Record<string, boolean>
   onSave: (servers: McpServers) => void
   onSetSecret: (name: string, value: string) => void
 }
@@ -40,7 +41,7 @@ function transportOf(server: McpServer): string {
   return typeof server.command === 'string' ? 'stdio' : 'http'
 }
 
-export function McpPanel({ servers, loading, saving, secrets, onSave, onSetSecret }: McpPanelProps) {
+export function McpPanel({ servers, loading, saving, secrets, busy, onSave, onSetSecret }: McpPanelProps) {
   const [draft, setDraft] = useState<McpServers>(servers)
   useEffect(() => { setDraft(servers) }, [servers])
 
@@ -152,11 +153,14 @@ export function McpPanel({ servers, loading, saving, secrets, onSave, onSetSecre
                           <div className="mt-2 space-y-1.5">
                             {refs.map(r => {
                               const ok = isSecretSet(r)
+                              const pending = !!busy[`sec-${r}`]
                               return (
                                 <div key={r} className="flex items-center gap-2">
                                   <span className={`text-[10px] font-mono border px-1.5 py-0.5 shrink-0 ${ok ? 'text-eva-green border-eva-green/30' : 'text-eva-orange border-eva-orange/30'}`}>${'{'}{r}{'}'}</span>
                                   {ok ? (
                                     <span className="text-[10px] font-mono text-eva-green">✓ set</span>
+                                  ) : pending ? (
+                                    <span className="text-[10px] font-mono text-primary-40">setting…</span>
                                   ) : (
                                     <>
                                       <input type="password" value={secretDraft[r] ?? ''} onChange={e => setSecretDraft(d => ({ ...d, [r]: e.target.value }))} onKeyDown={e => e.key === 'Enter' && saveRowSecret(r)} placeholder="paste bearer token — saved to GitHub & wired in" className="flex-1 min-w-0 bg-aeon-bg border border-[rgba(250,250,250,0.10)] px-2 py-1 text-[11px] font-mono text-primary-100 outline-none focus:border-eva-orange transition-colors cursor-target" />
