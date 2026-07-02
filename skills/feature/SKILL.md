@@ -213,7 +213,7 @@ After iterating every repo, end with a `## Summary` listing each watched repo an
 
 ## §B — External branch (best single enhancement on one repo)
 
-Runs when `${var}` starts with `external`. Ships **one** enhancement PR to **one** repo per run. Needs cross-repo access — `GH_GLOBAL` (or `GH_REPO_TOKEN`) must be present.
+Runs when `${var}` starts with `external`. Ships **one** enhancement PR to **one** repo per run. Needs cross-repo access — `GH_GLOBAL` must be present.
 
 ### B1. Read context
 
@@ -528,7 +528,7 @@ All GitHub operations go through the `gh` CLI — it handles auth internally via
 ## Environment Variables
 
 - `GH_TOKEN` / `GITHUB_TOKEN` — required (available by default in Actions). Powers `gh` for all branches.
-- `GH_GLOBAL` (or `GH_REPO_TOKEN`) — required for the **external** branch and for any **watched**/**dormant** target you don't own: the token needs permission to fork/push/PR across every targeted repo. Optional when only working repos the default token already covers.
+- `GH_GLOBAL` — required for the **external** branch and for any **watched**/**dormant** target you don't own: the token needs permission to fork/push/PR across every targeted repo. Optional when only working repos the default token already covers.
 
 ## Guidelines
 
