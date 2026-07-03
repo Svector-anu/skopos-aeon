@@ -9,12 +9,12 @@
   <a href="https://github.com/aaronjmars/aeon/network/members"><img src="https://img.shields.io/github/forks/aaronjmars/aeon?style=flat-square&logo=github" alt="GitHub forks"></a>
   <a href="https://x.com/aeonframework"><img src="https://img.shields.io/badge/Follow-%40aeonframework-black?style=flat-square&logo=x&labelColor=000000" alt="Follow on X"></a>
   <a href="https://bankr.bot/discover/0xbf8e8f0e8866a7052f948c16508644347c57aba3"><img src="https://img.shields.io/badge/Aeon%20on-Bankr-orange?style=flat-square&labelColor=1a1a2e" alt="Aeon on Bankr"></a>
-  <a href="CONTRIBUTING.md"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen?style=flat-square" alt="Contributing"></a>
+  <a href=".github/CONTRIBUTING.md"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen?style=flat-square" alt="Contributing"></a>
 </p>
 
 <p align="center">
   <strong>The most autonomous agent framework.</strong><br>
-  Give it a direction - it'll use 69 skills (deep research, PR reviews, market monitoring, Vercel deploys…) to get it done. No approval loops. No babysitting. Configure once, forget forever.
+  Give it a direction - it'll use 68 skills (deep research, PR reviews, market monitoring, Vercel deploys…) to get it done. No approval loops. No babysitting. Configure once, forget forever.
 </p>
 
 <p align="center">
@@ -60,7 +60,7 @@ Grab the `gh_*_macOS_arm64.zip` (or your platform's binary) from [github.com/cli
 
 ## What Aeon can do
 
-**69 skills, grouped into 10 packs.** By default the dashboard shows only the small **core** set; everything else is hidden until you **enable its pack** in the **Packs** view - a visibility switch that reveals a pack's skills across the UI without running anything. Putting a skill on duty stays a per-skill toggle. Every skill is independently installable, schedulable, and chainable. How packs work: [`docs/skill-packs.md`](docs/skill-packs.md).
+**68 skills, grouped into 10 packs.** By default the dashboard shows only the small **core** set; everything else is hidden until you **enable its pack** in the **Packs** view - a visibility switch that reveals a pack's skills across the UI without running anything. Putting a skill on duty stays a per-skill toggle. Every skill is independently installable, schedulable, and chainable. How packs work: [`docs/skill-packs.md`](docs/skill-packs.md).
 
 | Pack | Key | Skills | Examples |
 | --- | --- | --- | --- |
@@ -69,14 +69,14 @@ Grab the `gh_*_macOS_arm64.zip` (or your platform's binary) from [github.com/cli
 | 📚 **Research & Content** | `research` | 6 | `article`, `fetch-tweets`, `idea-forge` |
 | 💻 **Dev & Code** | `dev` | 18 | `pr-review`, `github-monitor`, `auto-merge` |
 | 📈 **Crypto & Markets** | `markets` | 16 | `token-movers`, `defi-overview`, `base-mcp` |
-| 🛡️ **Onchain Security** | `hound` | 3 | `investigation-report`, `tx-explain`, `wallet-profile` |
+| 🛡️ **Onchain Security** | `hound` | 2 | `investigation-report`, `tx-explain` |
 | ✍️ **Social & Writing** | `social` | 5 | `write-tweet`, `reply-maker`, `mention-radar` |
 | ✅ **Productivity** | `productivity` | 5 | `action-converter`, `shiplog`, `strategy-builder` |
 | 🤖 **Agent Ops** | `agent-ops` | 2 | `operator-scorecard`, `memory-flush` |
 | 🧪 **Lab** - unsorted; freshly authored/imported skills awaiting a pack | `lab` | 0 | _(empty — add via `category:`)_ |
 
 <details>
-<summary><strong>Full catalog (all 69 skills by pack)</strong></summary>
+<summary><strong>Full catalog (all 68 skills by pack)</strong></summary>
 
 | Pack | Skills |
 |------|--------|
@@ -85,7 +85,7 @@ Grab the `gh_*_macOS_arm64.zip` (or your platform's binary) from [github.com/cli
 | **Research & Content** (`research`, 6) | `article`,`bd-radar`,`fetch-tweets`,`idea-forge`,`last30`,`narrative-convergence` |
 | **Dev & Code** (`dev`, 18) | `auto-merge`,`auto-workflow`,`changelog`,`code-health`,`ecosystem-pulse`,`feature`,`fork-fleet`,`github-monitor`,`github-trending`,`inbox-triage`,`issue-triage`,`pr-review`,`pr-triage`,`repo-scanner`,`search-skill`,`star-milestone`,`vuln-tracker`,`workflow-audit` |
 | **Crypto & Markets** (`markets`, 16) | `base-mcp`,`ctrl`,`defi-overview`,`fear-divergence`,`monitor-polymarket`,`narrative-tracker`,`onchain-monitor`,`picks-tracker`,`pm-manipulation`,`pm-pulse`,`price-alert`,`token-movers`,`token-pick`,`treasury-info`,`unlock-monitor`,`x402-monitor` |
-| **Onchain Security** (`hound`, 3) | `investigation-report`,`tx-explain`,`wallet-profile` |
+| **Onchain Security** (`hound`, 2) | `investigation-report`,`tx-explain` |
 | **Social & Writing** (`social`, 5) | `mention-radar`,`reply-maker`,`schedule-ads`,`soul-builder`,`write-tweet` |
 | **Productivity** (`productivity`, 5) | `action-converter`,`idea-pipeline`,`send-email`,`shiplog`,`strategy-builder` |
 | **Agent Ops** (`agent-ops`, 2) | `memory-flush`,`operator-scorecard` |
@@ -132,6 +132,7 @@ bin/export-skill token-movers               # package one for standalone use
 Installed skills land in `skills/` and are added to `aeon.yml` disabled - flip `enabled: true` to activate. You can also:
 
 - **Build your own** from [`skill-templates/`](skill-templates/TEMPLATE.md): `bin/new-from-template <template> <skill-name> --category <pack>` - the `--category` slots it into a pack (or set `category:` in the SKILL.md frontmatter). See [`docs/skill-packs.md`](docs/skill-packs.md).
+- **Use one skill elsewhere** without forking: drop a portable workflow from [`examples/workflow-templates/`](examples/workflow-templates/) into any repo's `.github/workflows/`.
 - **Label any GitHub issue `ai-build`** - Claude reads the issue, implements it, and opens a PR
 - **Install community packs** - see [Community skill packs](#community-skill-packs)
 
@@ -500,13 +501,6 @@ Prefer files? Fork [soul.md](https://github.com/aaronjmars/soul.md), fill in `SO
 
 **Quality check:** soul files work when they're specific enough to be wrong. *"I think most AI safety discourse is galaxy-brained cope"* is useful; *"I have nuanced views on AI safety"* is not.
 
-### Publishing (GitHub Pages & RSS)
-
-Aeon publishes articles to a GitHub Pages gallery and an RSS feed.
-
-- **Pages:** Settings → Pages → source `Deploy from a branch`, branch `main`, folder `/docs`. The site lives at `https://<username>.github.io/aeon`; the `update-gallery` skill keeps it in sync.
-- **RSS:** Subscribe at `https://raw.githubusercontent.com/<owner>/<repo>/main/articles/feed.xml` - regenerated after each content skill runs.
-
 ### Telegram instant mode
 
 Replies aren't instant by default - Aeon runs on GitHub Actions and polls Telegram every 5 minutes. That's by design: it's built for autonomous background work, not real-time chat. For ~1-second replies, deploy the self-contained Cloudflare Worker in [`apps/webhook/`](apps/webhook/) into your own Cloudflare account (no shared infra, no credential custody) - a one-time setup of about 5 minutes:
@@ -612,7 +606,7 @@ aeon                     ← launch the local dashboard (run ./aeon; Next.js on 
 notify                   ← multi-channel notifications (Telegram, Discord, Slack, Email, json-render)
 notify-jsonrender        ← convert skill output to dashboard feed cards via Haiku
 catalog/                 ← registries the dashboard reads (generated + hand-authored)
-  skills.json            ← machine-readable skill catalog (69 skills, category per skill)
+  skills.json            ← machine-readable skill catalog (68 skills, category per skill)
   packs.config.json      ← first-party pack definitions (core allowlist + pack list)
   packs.json             ← generated pack catalog (10 packs)
   skill-packs.json       ← community skill-pack registry
@@ -625,11 +619,12 @@ bin/                     ← operator + maintainer CLI (run from repo root, e.g.
   new-from-template      ← scaffold a skill from a template (--category sets its pack)
   generate-skills-json   ← regenerate catalog/skills.json from SKILL.md files
   generate-packs-json    ← regenerate catalog/packs.json from the two configs above
-docs/                    ← GitHub Pages site (articles, activity log, memory)
+docs/                    ← reference docs (CORE, CAPABILITIES, skill-packs, telegram, help/status)
 soul/                    ← optional identity files (SOUL.md, STYLE.md, examples/, data/)
-skills/                  ← each skill is a SKILL.md prompt file (69 total; `category:` = its pack)
-workflow-templates/      ← GitHub Agentic Workflow templates (.md)
+skills/                  ← each skill is a SKILL.md prompt file (68 total; `category:` = its pack)
 skill-templates/         ← templates for building your own skills
+examples/                ← MCP quickstart + portable workflow templates
+  workflow-templates/    ← GitHub Agentic Workflow .md (adopt a skill without forking)
 apps/                    ← standalone sub-projects, each with its own package.json
   dashboard/             ← local web UI (Next.js + json-render feed)
   mcp-server/            ← MCP server - exposes skills as Claude tools
@@ -647,7 +642,6 @@ scripts/
   prefetch-xai.sh        ← pre-fetch X/Grok API data outside sandbox
   postprocess-replicate.sh ← generate images via Replicate after Claude runs
   skill-runs             ← audit recent GitHub Actions skill runs
-  sync-site-data.sh      ← sync memory/logs to docs site data
 .github/workflows/
   aeon.yml               ← skill runner (workflow_dispatch, issues, quality scoring)
   chain-runner.yml       ← skill chain executor (parallel + sequential pipelines)
