@@ -1,0 +1,16 @@
+{
+  "skill": "narrative-tracker",
+  "last_analyzed": "2026-07-06T19:02:19Z",
+  "quality_score": 3,
+  "assessment": "Acceptable — completed task with decision-grade output and clear position calls, but narratives lack evidence anchors (violated STRATEGY.md requirement), log integration blocked, and freshness unverifiable.",
+  "flags": [
+    "stale_data"
+  ],
+  "avg_score": 3,
+  "history": [
+    {
+      "date": "2026-07-06",
+      "score": 3
+    }
+  ]
+}

@@ -1,2 +1,3 @@
 date,skill,model,input_tokens,output_tokens,cache_read,cache_creation
 2026-07-06,defi-overview,claude-sonnet-4-6,21,19927,1086944,68036
+2026-07-06,narrative-tracker,claude-sonnet-4-6,754,12050,907241,51335
