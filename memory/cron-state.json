@@ -12,5 +12,15 @@
     "consecutive_failures": 0,
     "success_rate": 1,
     "last_quality_score": 4
+  },
+  "narrative-tracker": {
+    "last_status": "failed",
+    "last_failed": "2026-07-06T18:34:25Z",
+    "total_runs": 1,
+    "total_successes": 0,
+    "total_failures": 1,
+    "consecutive_failures": 1,
+    "success_rate": 0,
+    "last_error": "e descriptor (niche/growing/saturating/cooling), 4) the strongest one-line bear case against it.\\\"}],\\\"tools\\\":[{\\\"type\\\":\\\"x_search\\\",\\\"from_date\\\":\\\"2026-07-03\\\",\\\"to_date\\\":\\\"2026-07-06\\\"}]}' && cu"
   }
 }
