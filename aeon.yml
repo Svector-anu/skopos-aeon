@@ -23,7 +23,7 @@ skills:
   onchain-monitor: { enabled: false, schedule: "0 12 * * *" }
   treasury-info: { enabled: false, schedule: "0 12 * * *" }
   distribute-tokens: { enabled: false, schedule: "workflow_dispatch", var: "" } # on-demand contributor rewards. var: empty/<label>=distribute (send) | plan[:week]=compute reward plan | all[:week]=plan+send | dry-run (folds in contributor-reward). BANKR_API_KEY for send.
-  defi-overview: { enabled: false, schedule: "0 12 * * *", var: "" } # one-pass DeFi read: tracked-protocol positions + macro context (regime verdict, movers, yields, fees, F&G, prediction markets; refreshes memory/topics/market-context.md). var: empty=full | positions[:label] | macro | <chain/protocol focus>. Optional COINGECKO_API_KEY.
+  defi-overview: { enabled: true, schedule: "0 */6 * * *", var: "" } # one-pass DeFi read: tracked-protocol positions + macro context (regime verdict, movers, yields, fees, F&G, prediction markets; refreshes memory/topics/market-context.md). var: empty=full | positions[:label] | macro | <chain/protocol focus>. Optional COINGECKO_API_KEY.
   verdikta-hunter: { enabled: false, schedule: "workflow_dispatch", var: "" } # Verdikta AI-judged bounties on Base. var: empty=discover+settle (no new spend) | hunt[:jobId]=write report + queue hard-capped on-chain submission (executed post-run by scripts/postprocess-verdikta.sh, cap VERDIKTA_MAX_SPEND_ETH) | dry-run[:jobId]=validate only. Needs VERDIKTA_API_KEY; VERDIKTA_WALLET_KEY (dedicated hot wallet) to submit.
 
   # --- Hound onchain investigation (on-demand; var = address / tx hash) ---
@@ -34,7 +34,7 @@ skills:
   monitor-polymarket: { enabled: false, schedule: "30 12 * * *", var: "" } # prediction-market monitor (Polymarket + Kalshi) — 24h moves, volume, comments, conviction alerts. var: empty=both | polymarket | kalshi | polymarket:<slug> | kalshi:<ticker>
   token-pick: { enabled: false, schedule: "0 12 * * *" }
   price-alert: { enabled: false, schedule: "*/30 * * * *", var: "" } # every 30 minutes — fire on tracked-token ATH, ±20% 1h move, or operator-set target crossing (var=target_price,target_price2,...). Silent on normal runs. Set var=dry-run to skip notify.
-  narrative-tracker: { enabled: false, schedule: "30 13 * * *" } # track rising/peaking/fading narratives
+  narrative-tracker: { enabled: true, schedule: "30 */6 * * *" } # track rising/peaking/fading narratives
   unlock-monitor: { enabled: false, schedule: "0 10 * * 1" } # weekly token unlock/vesting tracker
 
   # --- Afternoon (2 PM UTC) ---
@@ -218,7 +218,7 @@ harness: claude
 # + secret ANTHROPIC_API_KEY. Example: https://api.deepseek.com/anthropic
 # Bankr docs: https://docs.bankr.bot/llm-gateway/overview
 gateway:
-  provider: auto
+  provider: bankr
 
 # Output channels
 channels:
