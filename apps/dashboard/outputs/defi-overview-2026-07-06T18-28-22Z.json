@@ -1,0 +1,743 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Crypto — 2026-07-06",
+        "description": "chop (conviction low) | DeFi: TVL flat, DEX vol −6.7%, F&G pinned extreme fear"
+      },
+      "children": [
+        "tvl-section",
+        "sep1",
+        "top-chains-section",
+        "sep2",
+        "movers-section",
+        "sep3",
+        "fees-section",
+        "sep4",
+        "dex-section",
+        "sep5",
+        "stables-section",
+        "sep6",
+        "real-yield-section",
+        "sep7",
+        "incentive-yield-section",
+        "sep8",
+        "macro-section",
+        "sep9",
+        "sources-section"
+      ]
+    },
+    "tvl-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tvl-heading",
+        "tvl-stat"
+      ]
+    },
+    "tvl-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "TVL",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "tvl-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Total TVL",
+        "value": "$74.6B",
+        "delta": "chain deltas n/a this run"
+      },
+      "children": []
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {},
+      "children": []
+    },
+    "top-chains-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "top-chains-heading",
+        "top-chains-table"
+      ]
+    },
+    "top-chains-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Top chains",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "top-chains-table": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Rank",
+          "Chain",
+          "TVL"
+        ],
+        "rows": [
+          [
+            "1",
+            "Ethereum",
+            "$40.2B"
+          ],
+          [
+            "2",
+            "Solana",
+            "$5.1B"
+          ],
+          [
+            "3",
+            "BSC",
+            "$5.0B"
+          ]
+        ]
+      },
+      "children": []
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {},
+      "children": []
+    },
+    "movers-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "movers-heading",
+        "movers-note",
+        "movers-list"
+      ]
+    },
+    "movers-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Movers",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "movers-note": {
+      "type": "Text",
+      "props": {
+        "text": "No chain movers cleared the ≥5%/≥$500M filter today — chain 1d deltas unavailable from DeFiLlama.",
+        "variant": "muted"
+      },
+      "children": []
+    },
+    "movers-list": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "mover-1",
+        "mover-2",
+        "mover-3"
+      ]
+    },
+    "mover-1": {
+      "type": "Text",
+      "props": {
+        "text": "↑ Mellow Core +19.9% ($0.25B) — no obvious catalyst"
+      },
+      "children": []
+    },
+    "mover-2": {
+      "type": "Text",
+      "props": {
+        "text": "↑ Dolomite +14.3% ($0.25B) — no obvious catalyst"
+      },
+      "children": []
+    },
+    "mover-3": {
+      "type": "Text",
+      "props": {
+        "text": "↓ Babylon Protocol −13.7% ($2.76B) — no obvious catalyst"
+      },
+      "children": []
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {},
+      "children": []
+    },
+    "fees-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "fees-heading",
+        "fees-table",
+        "fees-note"
+      ]
+    },
+    "fees-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Fees leaders (24h)",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "fees-table": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Rank",
+          "Protocol",
+          "Fees (24h)",
+          "vs 7d avg"
+        ],
+        "rows": [
+          [
+            "1",
+            "Tether",
+            "$16.0M",
+            "flat"
+          ],
+          [
+            "2",
+            "Circle USDC",
+            "$6.4M",
+            "flat"
+          ],
+          [
+            "3",
+            "Canton",
+            "$1.9M",
+            "+0.9%"
+          ]
+        ]
+      },
+      "children": []
+    },
+    "fees-note": {
+      "type": "Text",
+      "props": {
+        "text": "no fees-beating-TVL protocols cleared filter (fees_7d_change>+20% AND tvl_7d_change<+5%) today",
+        "variant": "muted"
+      },
+      "children": []
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {},
+      "children": []
+    },
+    "dex-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "dex-heading",
+        "dex-vol-stat",
+        "dex-top"
+      ]
+    },
+    "dex-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "DEX vol (24h)",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "dex-vol-stat": {
+      "type": "Stat",
+      "props": {
+        "value": "$4.74B",
+        "delta": "−6.7%",
+        "trend": "down"
+      },
+      "children": []
+    },
+    "dex-top": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "dex-label",
+        "dex-item-1",
+        "dex-item-2",
+        "dex-item-3"
+      ]
+    },
+    "dex-label": {
+      "type": "Text",
+      "props": {
+        "text": "Top:",
+        "variant": "lead"
+      },
+      "children": []
+    },
+    "dex-item-1": {
+      "type": "Text",
+      "props": {
+        "text": "PumpSwap $0.73B (−28%)"
+      },
+      "children": []
+    },
+    "dex-item-2": {
+      "type": "Text",
+      "props": {
+        "text": "Uniswap V4 $0.51B (+18%)"
+      },
+      "children": []
+    },
+    "dex-item-3": {
+      "type": "Text",
+      "props": {
+        "text": "Aerodrome $0.42B (+42%)"
+      },
+      "children": []
+    },
+    "sep5": {
+      "type": "Separator",
+      "props": {},
+      "children": []
+    },
+    "stables-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "stables-heading",
+        "stables-stat",
+        "stables-note"
+      ]
+    },
+    "stables-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Stables",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "stables-stat": {
+      "type": "Stat",
+      "props": {
+        "value": "$311B",
+        "label": "Total stablecoins"
+      },
+      "children": []
+    },
+    "stables-note": {
+      "type": "Text",
+      "props": {
+        "text": "no single issuer moved ≥1% 24h",
+        "variant": "muted"
+      },
+      "children": []
+    },
+    "sep6": {
+      "type": "Separator",
+      "props": {},
+      "children": []
+    },
+    "real-yield-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "real-yield-heading",
+        "real-yield-table"
+      ]
+    },
+    "real-yield-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Real yield (sustainable, ≥$10M, filtered)",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "real-yield-table": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Pair",
+          "DEX",
+          "Chain",
+          "APY Base",
+          "TVL"
+        ],
+        "rows": [
+          [
+            "WETH-USDT",
+            "Uniswap V3",
+            "ETH",
+            "45.6%",
+            "$83M"
+          ],
+          [
+            "WBTC-USDT",
+            "Uniswap V3",
+            "ETH",
+            "23.9%",
+            "$14M"
+          ],
+          [
+            "USDC-WETH",
+            "Uniswap V3",
+            "ETH",
+            "23.2%",
+            "$20M"
+          ]
+        ]
+      },
+      "children": []
+    },
+    "sep7": {
+      "type": "Separator",
+      "props": {},
+      "children": []
+    },
+    "incentive-yield-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "incentive-yield-heading",
+        "incentive-yield-table"
+      ]
+    },
+    "incentive-yield-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Incentive yield (points / emissions, ≥$25M)",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "incentive-yield-table": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Pair",
+          "Protocol",
+          "Chain",
+          "APY",
+          "TVL"
+        ],
+        "rows": [
+          [
+            "USDC-AERO",
+            "Aerodrome-v1",
+            "Base",
+            "36.6% via $AERO rewards",
+            "$34M"
+          ],
+          [
+            "sdCRV",
+            "Stake DAO",
+            "ETH",
+            "22.3% via $CRV rewards",
+            "$25M"
+          ]
+        ]
+      },
+      "children": []
+    },
+    "sep8": {
+      "type": "Separator",
+      "props": {},
+      "children": []
+    },
+    "macro-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "macro-heading",
+        "macro-prices",
+        "macro-sentiment",
+        "macro-breadth",
+        "macro-trending"
+      ]
+    },
+    "macro-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Macro",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "macro-prices": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "btc-stat",
+        "eth-stat"
+      ]
+    },
+    "btc-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "BTC",
+        "value": "$63,725",
+        "delta": "+1.7%",
+        "trend": "up"
+      },
+      "children": []
+    },
+    "eth-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "ETH",
+        "value": "$1,790",
+        "delta": "+0.7%",
+        "trend": "up"
+      },
+      "children": []
+    },
+    "macro-sentiment": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "fng-stat",
+        "fng-badge"
+      ]
+    },
+    "fng-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Fear & Greed",
+        "value": "24"
+      },
+      "children": []
+    },
+    "fng-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "Extreme Fear",
+        "variant": "destructive"
+      },
+      "children": []
+    },
+    "macro-breadth": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "breadth-stat",
+        "green-stat"
+      ]
+    },
+    "breadth-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Breadth",
+        "value": "11/20"
+      },
+      "children": []
+    },
+    "green-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Green 7d",
+        "value": "18/20"
+      },
+      "children": []
+    },
+    "macro-trending": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "trending-label",
+        "trending-1",
+        "trending-2",
+        "trending-3"
+      ]
+    },
+    "trending-label": {
+      "type": "Text",
+      "props": {
+        "text": "Trending:",
+        "variant": "lead"
+      },
+      "children": []
+    },
+    "trending-1": {
+      "type": "Text",
+      "props": {
+        "text": "YFI +43.5%"
+      },
+      "children": []
+    },
+    "trending-2": {
+      "type": "Text",
+      "props": {
+        "text": "Lido +14.1% 7d"
+      },
+      "children": []
+    },
+    "trending-3": {
+      "type": "Text",
+      "props": {
+        "text": "World Cup dominates Polymarket"
+      },
+      "children": []
+    },
+    "sep9": {
+      "type": "Separator",
+      "props": {},
+      "children": []
+    },
+    "sources-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "sources-label",
+        "sources-badges"
+      ]
+    },
+    "sources-label": {
+      "type": "Text",
+      "props": {
+        "text": "Sources",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "sources-badges": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "source-1",
+        "source-2",
+        "source-3",
+        "source-4",
+        "source-5",
+        "source-6",
+        "source-7",
+        "source-8",
+        "source-9"
+      ]
+    },
+    "source-1": {
+      "type": "Badge",
+      "props": {
+        "text": "llama_tvl: ok",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "source-2": {
+      "type": "Badge",
+      "props": {
+        "text": "llama_dex: ok",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "source-3": {
+      "type": "Badge",
+      "props": {
+        "text": "llama_fees: ok",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "source-4": {
+      "type": "Badge",
+      "props": {
+        "text": "llama_stables: ok",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "source-5": {
+      "type": "Badge",
+      "props": {
+        "text": "llama_yields: ok",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "source-6": {
+      "type": "Badge",
+      "props": {
+        "text": "coingecko: ok",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "source-7": {
+      "type": "Badge",
+      "props": {
+        "text": "fng: ok",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "source-8": {
+      "type": "Badge",
+      "props": {
+        "text": "polymarket: ok",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "source-9": {
+      "type": "Badge",
+      "props": {
+        "text": "websearch: fail",
+        "variant": "destructive"
+      },
+      "children": []
+    }
+  }
+}
