@@ -24,5 +24,15 @@
     "last_error": "e descriptor (niche/growing/saturating/cooling), 4) the strongest one-line bear case against it.\\\"}],\\\"tools\\\":[{\\\"type\\\":\\\"x_search\\\",\\\"from_date\\\":\\\"2026-07-03\\\",\\\"to_date\\\":\\\"2026-07-06\\\"}]}' && cu",
     "last_success": "2026-07-06T19:03:25Z",
     "last_quality_score": 3
+  },
+  "token-movers": {
+    "last_status": "success",
+    "last_success": "2026-07-07T18:08:23Z",
+    "total_runs": 1,
+    "total_successes": 1,
+    "total_failures": 0,
+    "consecutive_failures": 0,
+    "success_rate": 1,
+    "last_quality_score": 4
   }
 }
