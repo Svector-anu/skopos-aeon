@@ -19,7 +19,7 @@ skills:
   github-trending: { enabled: false, schedule: "0 9 * * *", var: "" } # trending repos + Hugging Face Hub. var: empty=GitHub | <lang> | hf | hf:{models,datasets,spaces}
 
   # --- Midday (12 PM UTC) ---
-  token-movers: { enabled: true, schedule: "0 12 * * *", var: "" } # market-movers scan + single-token deep report. var: empty=movers (CoinGecko) | geckoterminal[:chain]=on-chain runners | category:<slug> | <address|symbol|token:sym>=single-token report. Optional COINGECKO/ALCHEMY/XAI/BASE_RPC keys.
+  token-movers: { enabled: false, schedule: "0 12 * * *", var: "" } # market-movers scan + single-token deep report. var: empty=movers (CoinGecko) | geckoterminal[:chain]=on-chain runners | category:<slug> | <address|symbol|token:sym>=single-token report. Optional COINGECKO/ALCHEMY/XAI/BASE_RPC keys.
   onchain-monitor: { enabled: false, schedule: "0 12 * * *" }
   treasury-info: { enabled: false, schedule: "0 12 * * *" }
   distribute-tokens: { enabled: false, schedule: "workflow_dispatch", var: "" } # on-demand contributor rewards. var: empty/<label>=distribute (send) | plan[:week]=compute reward plan | all[:week]=plan+send | dry-run (folds in contributor-reward). BANKR_API_KEY for send.
