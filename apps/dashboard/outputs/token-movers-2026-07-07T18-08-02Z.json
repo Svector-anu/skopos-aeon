@@ -1,0 +1,40 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "token-movers"
+      },
+      "children": [
+        "stack-content"
+      ]
+    },
+    "stack-content": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "badge-ref",
+        "text-message"
+      ]
+    },
+    "badge-ref": {
+      "type": "Badge",
+      "props": {
+        "text": "deep-dive"
+      },
+      "children": []
+    },
+    "text-message": {
+      "type": "Text",
+      "props": {
+        "text": "Want a deep-dive report on a mover? Reply with a ticker or contract."
+      },
+      "children": []
+    }
+  }
+}
