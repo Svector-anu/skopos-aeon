@@ -1,0 +1,14 @@
+{
+  "skill": "fear-divergence",
+  "last_analyzed": "2026-07-08T13:25:24Z",
+  "quality_score": 4,
+  "assessment": "Skill executed correctly with sound logic—no divergence signal exists when BTC rises, so skip was appropriate. Clean decision, proper logging, follows Aeon's \"no signal today is valid\" principle.",
+  "flags": [],
+  "avg_score": 4,
+  "history": [
+    {
+      "date": "2026-07-08",
+      "score": 4
+    }
+  ]
+}
