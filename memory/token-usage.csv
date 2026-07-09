@@ -3,3 +3,4 @@ date,skill,model,input_tokens,output_tokens,cache_read,cache_creation
 2026-07-06,narrative-tracker,claude-sonnet-4-6,754,12050,907241,51335
 2026-07-07,token-movers,claude-sonnet-4-6,18,12165,920964,63676
 2026-07-08,x402-monitor,claude-sonnet-4-6,163,8957,1010070,33116
+2026-07-09,narrative-tracker,claude-sonnet-4-6,271,22959,1201884,60128

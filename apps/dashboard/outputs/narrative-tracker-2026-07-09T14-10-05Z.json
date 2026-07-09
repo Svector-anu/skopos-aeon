@@ -1,0 +1,366 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Narrative Tracker"
+      },
+      "children": [
+        "stack-main"
+      ]
+    },
+    "stack-main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-date",
+        "sep-1",
+        "heading-transitions",
+        "stack-transitions",
+        "sep-2",
+        "heading-positions",
+        "stack-positions",
+        "sep-3",
+        "heading-snapshot",
+        "stack-snapshot"
+      ]
+    },
+    "heading-date": {
+      "type": "Heading",
+      "props": {
+        "text": "2026-07-09",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "heading-transitions": {
+      "type": "Heading",
+      "props": {
+        "text": "TRANSITIONS",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "stack-transitions": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "stack-new",
+        "stack-promoted",
+        "stack-demoted",
+        "stack-dead"
+      ]
+    },
+    "stack-new": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading-new",
+        "text-new-items"
+      ]
+    },
+    "heading-new": {
+      "type": "Heading",
+      "props": {
+        "text": "NEW",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "text-new-items": {
+      "type": "Text",
+      "props": {
+        "text": "Regulated Stablecoins/GENIUS Act, Hyperliquid/On-chain Perps",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "stack-promoted": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading-promoted",
+        "text-promoted-items"
+      ]
+    },
+    "heading-promoted": {
+      "type": "Heading",
+      "props": {
+        "text": "PROMOTED",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "text-promoted-items": {
+      "type": "Text",
+      "props": {
+        "text": "Monad Rising, DeFi Blue-chip Rising",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "stack-demoted": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading-demoted",
+        "text-demoted-items"
+      ]
+    },
+    "heading-demoted": {
+      "type": "Heading",
+      "props": {
+        "text": "DEMOTED",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "text-demoted-items": {
+      "type": "Text",
+      "props": {
+        "text": "x402 Peak (reflexivity), SOL Meme/DEX deep fade",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "stack-dead": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading-dead",
+        "text-dead-items"
+      ]
+    },
+    "heading-dead": {
+      "type": "Heading",
+      "props": {
+        "text": "DEAD",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "text-dead-items": {
+      "type": "Text",
+      "props": {
+        "text": "Extreme Fear Divergence",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "heading-positions": {
+      "type": "Heading",
+      "props": {
+        "text": "POSITIONS",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "stack-positions": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "stack-frontrun",
+        "stack-ride",
+        "stack-fade",
+        "stack-watch"
+      ]
+    },
+    "stack-frontrun": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading-frontrun",
+        "text-frontrun-items"
+      ]
+    },
+    "heading-frontrun": {
+      "type": "Heading",
+      "props": {
+        "text": "FRONT-RUN",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "text-frontrun-items": {
+      "type": "Text",
+      "props": {
+        "text": "Regulated Stables",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "stack-ride": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading-ride",
+        "text-ride-items"
+      ]
+    },
+    "heading-ride": {
+      "type": "Heading",
+      "props": {
+        "text": "RIDE",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "text-ride-items": {
+      "type": "Text",
+      "props": {
+        "text": "BTC Dominance, DeFi Blue-chips, Perps",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "stack-fade": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading-fade",
+        "text-fade-items"
+      ]
+    },
+    "heading-fade": {
+      "type": "Heading",
+      "props": {
+        "text": "FADE",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "text-fade-items": {
+      "type": "Text",
+      "props": {
+        "text": "x402, SOL Meme",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "stack-watch": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading-watch",
+        "text-watch-items"
+      ]
+    },
+    "heading-watch": {
+      "type": "Heading",
+      "props": {
+        "text": "WATCH",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "text-watch-items": {
+      "type": "Text",
+      "props": {
+        "text": "Monad",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "sep-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "heading-snapshot": {
+      "type": "Heading",
+      "props": {
+        "text": "MARKET SNAPSHOT",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "stack-snapshot": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "stat-fear-gauge",
+        "stat-btc-dom",
+        "text-qualitative"
+      ]
+    },
+    "stat-fear-gauge": {
+      "type": "Stat",
+      "props": {
+        "label": "Fear & Greed Index",
+        "value": "22",
+        "delta": "Extreme Fear"
+      },
+      "children": []
+    },
+    "stat-btc-dom": {
+      "type": "Stat",
+      "props": {
+        "label": "BTC Dominance",
+        "value": "58.3%"
+      },
+      "children": []
+    },
+    "text-qualitative": {
+      "type": "Text",
+      "props": {
+        "text": "All categories red · risk-off is the trade",
+        "variant": "body"
+      },
+      "children": []
+    }
+  }
+}

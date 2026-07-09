@@ -1,16 +1,18 @@
 {
   "skill": "narrative-tracker",
-  "last_analyzed": "2026-07-06T19:02:19Z",
-  "quality_score": 3,
-  "assessment": "Acceptable — completed task with decision-grade output and clear position calls, but narratives lack evidence anchors (violated STRATEGY.md requirement), log integration blocked, and freshness unverifiable.",
-  "flags": [
-    "stale_data"
-  ],
-  "avg_score": 3,
+  "last_analyzed": "2026-07-09T14:10:05Z",
+  "quality_score": 4,
+  "assessment": "Substantive output with 7 detected transitions and actionable position calls (FRONT-RUN/RIDE/FADE/WATCH). Well-structured, transparent about data gaps, aligned with strategy. Good but not excellent due to partial data coverage and 3-day baseline.",
+  "flags": [],
+  "avg_score": 3.5,
   "history": [
     {
       "date": "2026-07-06",
       "score": 3
+    },
+    {
+      "date": "2026-07-09",
+      "score": 4
     }
   ]
 }
