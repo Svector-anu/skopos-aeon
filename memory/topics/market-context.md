@@ -3,71 +3,78 @@ type: Token
 title: Market Context
 description: Current crypto macro snapshot — regime, signal snapshot, narratives, DeFi, prediction markets.
 tags: [crypto, macro, defi, market-context]
-timestamp: 2026-07-06T00:00:00Z
+timestamp: 2026-07-09T00:00:00Z
 ---
 
-# Market Context (as of 2026-07-06)
+# Market Context (as of 2026-07-09)
 
-> **Take:** chop — BTC +1.7% 24h but F&G pinned at 24 (Extreme Fear) and DEX volume -6.7%; no directional conviction. Conviction: low.
+> **Take:** chop — BTC +1.7% 24h with 17/20 top-cap majors green but F&G pinned at 22 (Extreme Fear); no capital commitment signal. Conviction: low.
 
 ## Signal Snapshot
-- BTC $63,725 (+1.7% 24h, +6.5% 7d) · dominance 55.9%
-- ETH $1,790 (+0.7% 24h, +13.1% 7d) · ETH/BTC 0.0281
-- SOL $81 (+0.3% 24h, +10.2% 7d)
-- Total mcap $2.28T (+0.8% 24h) · DEX vol $4.74B 24h
-- Breadth: 11/20 green 24h · 18/20 green 7d
-- Fear & Greed: 24 (Extreme Fear) — yesterday 23 (Extreme Fear)
+- BTC $62,999 (+1.7% 24h) · dominance 56.2% (+0.3 pp vs Jul 6)
+- ETH $1,747 (+0.6% 24h) · ETH/BTC 0.0277
+- SOL $78.15 (+1.3% 24h)
+- Total mcap $2.25T (+1.2% 24h) · DEX vol $7.92B 24h
+- Breadth: 17/20 green 24h · 11/20 green 7d
+- Fear & Greed: 22 (Extreme Fear) — yesterday 20 (Extreme Fear)
 
 ## What Changed Since Last Refresh
-- First run — no prior snapshot to diff against.
+- DEX 24h volume: $4.74B (Jul 6) → $7.92B today (+67% in 3 days, +6.5% 1d alone) — strongest volume in recent sessions.
+- Breadth: 11/20 green (Jul 6) → 17/20 today — notable improvement; price action broadening despite sentiment stuck in fear.
+- Regime call unchanged: chop. BTC flat over 3 days ($63,725 → $62,999, −1.1%).
+- F&G: 24 → 22 — marginally lower, still Extreme Fear zone; no zone change.
 
 ## Active Narratives
-- **DeFi blue-chip revival** — phase: emerging. Evidence: YFI +43.5% 24h trending; Aave V3 TVL +9.2% 7d ($12.9B).
-- **Staking infrastructure** — phase: rising. Evidence: Lido TVL +14.1% 7d ($16.4B); SSV Network +13.4% 7d ($8.8B).
-- **Monad new-L1** — phase: emerging. Evidence: MON +18.6% 24h, trending on CoinGecko; no on-chain TVL yet.
-- **Solana meme/DEX fading** — phase: fading. Evidence: PumpSwap vol $0.73B 24h (-27.7% 1d); BONK -11.6% 24h.
-- **Extreme Fear divergence** — phase: rising. Evidence: F&G 24 (2nd day Extreme Fear) while 7d breadth 18/20 green — sentiment/price split is a potential counter-trend setup.
+- **Sentiment-price divergence** — phase: rising. Evidence: F&G 22 (Extreme Fear, 4th+ day below 25) while breadth improved 11→17/20 and DEX volume +67% since Jul 6; classic counter-trend accumulation signal.
+- **DeFi blue-chip accumulation** — phase: rising. Evidence: Lido $15.95B (+6.0% 7d); SSV Network $8.5B (+5.2% 7d); Aave V3 $12.27B (+1.6% 7d) — staking/restaking TVL growing against sentiment.
+- **Solana speculative unwind** — phase: fading. Evidence: LAB −56.8% and SLX −16.5% both trending on CoinGecko today; PumpSwap vol declined -27.7% 1d on Jul 6; meme degenerate activity in distribution.
+- **Arbitrum resurgence** — phase: emerging. Evidence: ARB +12.6% 24h and trending on CoinGecko; BTC dominance flat (56.2%) suggests not yet alt season, but select L2 tokens catching bids.
+- **DEX volume surge** — phase: emerging. Evidence: $7.92B 24h total (+67% vs Jul 6 snapshot of $4.74B); change_1d +6.5% — multi-session trend, not a single-day spike.
 
 ## Top DeFi Protocols (TVL, 7d change)
-- Lido: $16.4B (+14.1%)
-- Aave V3: $12.9B (+9.2%)
-- SSV Network: $8.8B (+13.4%)
-- LayerZero V2: $7.4B (+0.6%)
-- WBTC: $7.3B (+6.7%)
+- Lido: $15.95B (+6.0%)
+- Aave V3: $12.27B (+1.6%)
+- SSV Network: $8.50B (+5.2%)
+- LayerZero V2: $7.22B (−1.2%)
+- WBTC: $7.14B (+2.3%)
 
-## Chain Flow (top 3 by TVL, 7d)
-- Ethereum: $40.2B (7d n/a)
-- Solana: $5.1B (7d n/a)
-- BSC: $5.0B (7d n/a)
+## Chain Flow (top 5 by TVL)
+- Ethereum: $39.0B
+- Solana: $4.95B
+- BSC: $4.88B
+- Tron: $4.87B
+- Base: $4.36B
 
-*Note: DeFiLlama chain-level 1d/7d deltas returned null this run — TVL figures are current snapshots only.*
+*Note: DeFiLlama chain-level 1d/7d deltas unavailable this run — TVL figures are current snapshots only.*
 
 ## Stablecoins
-Total: $311B. USDT $184B · USDC $73B · USDS $8B · DAI $4.8B · USD1 $4.5B · USDe $4.4B. Combined stable share of mcap: 13.6%. No single issuer moved ≥1% 24h.
+Total: $343.6B. USDT $183.3B (+0.2%) · USDC $73.3B (−0.1%) · USDS $7.55B (−1.1%) · DAI $4.85B · USD1 $4.47B (−1.2%) · USDe $4.38B (−0.6%). USDS and USD1 are the only notable single-issuer contractions (>1%). Combined stable share of total mcap: ~15.3%.
 
 ## Trending (CoinGecko)
-- YFI — yearn.finance revival spike; price $2,627 +43.5% 24h
-- ANSEM (The Black Bull) — memecoin; $0.40 +24.0% 24h
-- MON (Monad) — new L1 speculation; $0.024 +18.6% 24h
-- LIT (Lighter) — DEX token; $2.70 +11.7% 24h
-- PENGU (Pudgy Penguins) — NFT token; $0.0067 +0.6% 24h
+- SLX (Solstice) — $0.159 −16.5% 24h (speculative unwind)
+- LAB — $0.865 −56.8% 24h (continued collapse; was top trending on Jul 7 at −66%)
+- CASHCAT — $0.101 −13.1% 24h (memecoin distribution)
+- ANSEM (The Black Bull) — $0.320 +13.8% 24h (bounce after Jul 7 −7.6%)
+- PENGU (Pudgy Penguins) — $0.00616 +0.2% (stable)
+- ARB (Arbitrum) — $0.0862 +12.6% 24h (L2 resurgence)
+- BTC — $63,029 +2.2% (blue-chip catching bids)
 
 ## Prediction Markets (Polymarket, top by 24h vol)
 | Market | YES% | 24h Vol | Liquidity |
 |--------|------|---------|-----------|
-| Will Norway win the 2026 FIFA World Cup? | 5% | $10.9M | $1.3M |
-| Portugal vs. Spain: Team to Advance | 34% | $5.1M | $3.0M |
-| Will Spain win on 2026-07-06? | 50% | $4.9M | $6.1M |
-| Will England win the 2026 FIFA World Cup? | 15% | $4.8M | $2.1M |
+| Will France win on 2026-07-09? | 61.4% | $2.6M | $5.1M |
+| Will France win the 2026 FIFA World Cup? | 32.2% | $2.6M | $5.7M |
+| Will Argentina win the 2026 FIFA World Cup? | 20.1% | $2.8M | $7.4M |
+| Wimbledon: Muchova vs Gauff | 43.5% | $3.1M | $0.2M |
 
-*Top markets are World Cup — no crypto-specific markets in top 24h volume today.*
+*Top Polymarket markets today are FIFA World Cup + Wimbledon — no crypto-specific markets in top 24h volume.*
 
 ## Macro Catalysts (next 48h)
-- WebSearch returned no results — no confirmed macro catalysts or ETF flow data sourced today. Monitor for BTC ETF inflow data as a positioning signal.
+- WebSearch returned no results. No confirmed macro catalysts or BTC ETF flow data available. Monitor for ETF inflow data as a positioning signal — the volume surge without a clear catalyst is itself worth watching.
 
 ## Implications for Downstream Skills
-- **token-pick:** YFI spike and Aave TVL growth suggest DeFi blue-chip rotation worth watching; avoid Solana meme exposure on PumpSwap vol contraction.
-- **narrative-tracker:** monitor Extreme Fear divergence — 7d breadth 18/20 vs F&G 24 is a classic accumulation setup; watch for F&G base forming.
+- **token-pick:** Breadth improvement (17/20) + DEX volume surge suggest accumulation in select names — favor DeFi blue-chips (Lido, Aave) and emerging L2 resurgence (ARB). Avoid Solana memecoin exposure while LAB/SLX distribute.
+- **narrative-tracker:** Monitor sentiment-price divergence for phase transition — if F&G base forms above 25 while breadth holds 15+/20, regime could shift to risk-on within days.
 
 ## Token Picks Made
 | Date | Token | Price | Thesis |
@@ -75,4 +82,4 @@ Total: $311B. USDT $184B · USDC $73B · USDS $8B · DAI $4.8B · USD1 $4.5B · 
 
 ---
 *Sources — btc/eth/sol: CoinGecko · defi: DeFiLlama · sentiment: alternative.me · markets: Polymarket*
-*Source status: coingecko=ok defillama=ok fng=ok polymarket=ok websearch=fail (no results)*
+*Source status: coingecko=ok defillama=ok fng=ok polymarket=ok websearch=fail (no results) yields=fail (payload too large)*
