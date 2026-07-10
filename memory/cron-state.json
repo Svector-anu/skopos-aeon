@@ -11,17 +11,17 @@
     "last_error": "e701f30\",\"total_cost_usd\":0,\"usage\":{\"input_tokens\":0,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":0,\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\""
   },
   "defi-overview": {
-    "last_status": "dispatched",
+    "last_status": "failed",
     "last_success": "2026-07-09T14:12:37Z",
-    "total_runs": 10,
+    "total_runs": 11,
     "total_successes": 2,
-    "total_failures": 8,
-    "consecutive_failures": 8,
-    "success_rate": 0.2,
+    "total_failures": 9,
+    "consecutive_failures": 9,
+    "success_rate": 0.18,
     "last_quality_score": 3,
     "last_dispatch": "2026-07-10T12:29:24Z",
-    "last_failed": "2026-07-10T10:01:03Z",
-    "last_error": "ba5e0b2\",\"total_cost_usd\":0,\"usage\":{\"input_tokens\":0,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":0,\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\""
+    "last_failed": "2026-07-10T12:29:42Z",
+    "last_error": "b7598ef\",\"total_cost_usd\":0,\"usage\":{\"input_tokens\":0,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":0,\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\""
   },
   "narrative-tracker": {
     "last_status": "dispatched",
