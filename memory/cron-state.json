@@ -1,7 +1,7 @@
 {
   "heartbeat": {
-    "last_dispatch": "2026-07-10T12:29:24Z",
-    "last_status": "failed",
+    "last_dispatch": "2026-07-10T15:13:10Z",
+    "last_status": "dispatched",
     "last_failed": "2026-07-10T12:29:45Z",
     "total_runs": 3,
     "total_successes": 0,
@@ -11,7 +11,7 @@
     "last_error": "544363c\",\"total_cost_usd\":0,\"usage\":{\"input_tokens\":0,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":0,\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\""
   },
   "defi-overview": {
-    "last_status": "failed",
+    "last_status": "dispatched",
     "last_success": "2026-07-09T14:12:37Z",
     "total_runs": 11,
     "total_successes": 2,
@@ -19,12 +19,12 @@
     "consecutive_failures": 9,
     "success_rate": 0.18,
     "last_quality_score": 3,
-    "last_dispatch": "2026-07-10T12:29:24Z",
+    "last_dispatch": "2026-07-10T15:13:10Z",
     "last_failed": "2026-07-10T12:29:42Z",
     "last_error": "b7598ef\",\"total_cost_usd\":0,\"usage\":{\"input_tokens\":0,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":0,\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\""
   },
   "narrative-tracker": {
-    "last_status": "failed",
+    "last_status": "dispatched",
     "last_failed": "2026-07-10T12:29:43Z",
     "total_runs": 12,
     "total_successes": 2,
@@ -34,7 +34,7 @@
     "last_error": "768e614\",\"total_cost_usd\":0,\"usage\":{\"input_tokens\":0,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":0,\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\"",
     "last_success": "2026-07-09T14:10:40Z",
     "last_quality_score": 4,
-    "last_dispatch": "2026-07-10T12:29:24Z"
+    "last_dispatch": "2026-07-10T15:13:10Z"
   },
   "token-movers": {
     "last_status": "success",
