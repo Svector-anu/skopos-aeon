@@ -1,10 +1,12 @@
 {
   "skill": "defi-overview",
-  "last_analyzed": "2026-07-11T09:53:34Z",
+  "last_analyzed": "2026-07-11T12:45:59Z",
   "quality_score": 4,
-  "assessment": "Substantive macro report with specific metrics, proper conviction hedging, and actionable signals; positions facet gracefully skipped due to missing config.",
-  "flags": [],
-  "avg_score": 3.67,
+  "assessment": "Substantive, well-structured macro signal with specific metrics (BlackRock +15.7%, Uniswap fees +118.6%, F&G 26) and clear verdict (sideways/chop). Delivers decision-grade output aligned with STRATEGY. Minor gaps: Position monitor skipped due to missing config, no macro catalysts surfaced, TVL data cached.",
+  "flags": [
+    "stale_data"
+  ],
+  "avg_score": 3.75,
   "history": [
     {
       "date": "2026-07-06",
@@ -13,6 +15,10 @@
     {
       "date": "2026-07-09",
       "score": 3
+    },
+    {
+      "date": "2026-07-11",
+      "score": 4
     },
     {
       "date": "2026-07-11",

@@ -1,0 +1,798 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Crypto Overview 2026-07-11"
+      },
+      "children": [
+        "headline",
+        "sep1",
+        "tvl_section",
+        "sep2",
+        "top_chains_section",
+        "sep3",
+        "movers_section",
+        "sep4",
+        "fees_leaders_section",
+        "sep5",
+        "fees_standouts_section",
+        "sep6",
+        "dex_vol_section",
+        "sep7",
+        "stables_section",
+        "sep8",
+        "real_yield_section",
+        "sep9",
+        "incentive_yield_section",
+        "sep10",
+        "macro_section",
+        "sep11",
+        "sources_section"
+      ]
+    },
+    "headline": {
+      "type": "Text",
+      "props": {
+        "text": "Crypto — 2026-07-11 — chop (conviction low) | DeFi Sideways: vol −4.7% 1d, breadth 12/20, BTC flat",
+        "variant": "lead"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "tvl_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tvl_heading",
+        "tvl_stat"
+      ]
+    },
+    "tvl_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "TVL",
+        "level": "h3"
+      }
+    },
+    "tvl_stat": {
+      "type": "Stat",
+      "props": {
+        "value": "$74.5B",
+        "delta": "chain deltas API-cached; snapshot only"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "top_chains_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "top_chains_heading",
+        "top_chains_table"
+      ]
+    },
+    "top_chains_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Top chains (snapshot)",
+        "level": "h3"
+      }
+    },
+    "top_chains_table": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Chain",
+          "TVL"
+        ],
+        "rows": [
+          [
+            "Ethereum",
+            "$40.50B"
+          ],
+          [
+            "BSC",
+            "$4.96B"
+          ],
+          [
+            "Solana",
+            "$4.93B"
+          ]
+        ]
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "movers_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "movers_heading",
+        "mover1",
+        "mover2",
+        "mover3"
+      ]
+    },
+    "movers_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Movers",
+        "level": "h3"
+      }
+    },
+    "mover1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "mover1_badge",
+        "mover1_desc"
+      ]
+    },
+    "mover1_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "↑ BlackRock BUIDL +15.7% ($3.16B → $3.69B)",
+        "variant": "default"
+      }
+    },
+    "mover1_desc": {
+      "type": "Text",
+      "props": {
+        "text": "RWA institutional accumulation, consecutive session",
+        "variant": "caption"
+      }
+    },
+    "mover2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "mover2_badge",
+        "mover2_desc"
+      ]
+    },
+    "mover2_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "↑ Robinhood Chain Bridge +33.4% ($0.09B → $0.12B)",
+        "variant": "default"
+      }
+    },
+    "mover2_desc": {
+      "type": "Text",
+      "props": {
+        "text": "new institutional DeFi entry, no obvious catalyst beyond onboarding",
+        "variant": "caption"
+      }
+    },
+    "mover3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "mover3_badge",
+        "mover3_desc"
+      ]
+    },
+    "mover3_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "↓ K3 Capital −20.5% ($0.28B → $0.22B)",
+        "variant": "destructive"
+      }
+    },
+    "mover3_desc": {
+      "type": "Text",
+      "props": {
+        "text": "no obvious catalyst",
+        "variant": "caption"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {}
+    },
+    "fees_leaders_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "fees_leaders_heading",
+        "fees_leaders_table"
+      ]
+    },
+    "fees_leaders_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Fees leaders (24h)",
+        "level": "h3"
+      }
+    },
+    "fees_leaders_table": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Protocol",
+          "24h Fees",
+          "Change"
+        ],
+        "rows": [
+          [
+            "Tether",
+            "$15.92M",
+            "−1.1% vs 7d avg"
+          ],
+          [
+            "Circle USDC",
+            "$6.38M",
+            "flat"
+          ],
+          [
+            "Uniswap V3",
+            "$2.56M",
+            "+118.6% 1d — V3 fee surge alongside V4 volume"
+          ]
+        ]
+      }
+    },
+    "sep5": {
+      "type": "Separator",
+      "props": {}
+    },
+    "fees_standouts_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "fees_standouts_heading",
+        "fees_standout1",
+        "fees_standout2",
+        "fees_standout3"
+      ]
+    },
+    "fees_standouts_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Fees standout",
+        "level": "h3"
+      }
+    },
+    "fees_standout1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "fs1_title",
+        "fs1_badge",
+        "fs1_desc"
+      ]
+    },
+    "fs1_title": {
+      "type": "Text",
+      "props": {
+        "text": "• Maple",
+        "variant": "body"
+      }
+    },
+    "fs1_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "$1.29M 24h fees (+422.9% 7d)",
+        "variant": "secondary"
+      }
+    },
+    "fs1_desc": {
+      "type": "Text",
+      "props": {
+        "text": "lending demand surge, fees outrunning TVL",
+        "variant": "caption"
+      }
+    },
+    "fees_standout2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "fs2_title",
+        "fs2_badge",
+        "fs2_desc"
+      ]
+    },
+    "fs2_title": {
+      "type": "Text",
+      "props": {
+        "text": "• NOXA Fun",
+        "variant": "body"
+      }
+    },
+    "fs2_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "$1.76M 24h fees (+5,647% 7d)",
+        "variant": "secondary"
+      }
+    },
+    "fs2_desc": {
+      "type": "Text",
+      "props": {
+        "text": "new entrant, signal unclear",
+        "variant": "caption"
+      }
+    },
+    "fees_standout3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "fs3_title",
+        "fs3_badge",
+        "fs3_desc"
+      ]
+    },
+    "fs3_title": {
+      "type": "Text",
+      "props": {
+        "text": "• Polymarket International",
+        "variant": "body"
+      }
+    },
+    "fs3_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "$1.85M 24h fees (+12.3% 7d)",
+        "variant": "secondary"
+      }
+    },
+    "fs3_desc": {
+      "type": "Text",
+      "props": {
+        "text": "prediction market stickiness",
+        "variant": "caption"
+      }
+    },
+    "sep6": {
+      "type": "Separator",
+      "props": {}
+    },
+    "dex_vol_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "dex_vol_heading",
+        "dex_vol_stat",
+        "dex_vol_top_list"
+      ]
+    },
+    "dex_vol_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "DEX vol (24h)",
+        "level": "h3"
+      }
+    },
+    "dex_vol_stat": {
+      "type": "Stat",
+      "props": {
+        "value": "$6.37B",
+        "delta": "−4.7% 1d, +12.8% 7d"
+      }
+    },
+    "dex_vol_top_list": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "dex_vol_top_label",
+        "dex_vol_top1",
+        "dex_vol_top2",
+        "dex_vol_top3"
+      ]
+    },
+    "dex_vol_top_label": {
+      "type": "Text",
+      "props": {
+        "text": "Top:",
+        "variant": "caption"
+      }
+    },
+    "dex_vol_top1": {
+      "type": "Text",
+      "props": {
+        "text": "Uniswap V4 — $920M (−0.2%)",
+        "variant": "caption"
+      }
+    },
+    "dex_vol_top2": {
+      "type": "Text",
+      "props": {
+        "text": "Uniswap V3 — $657M (+10.7%)",
+        "variant": "caption"
+      }
+    },
+    "dex_vol_top3": {
+      "type": "Text",
+      "props": {
+        "text": "Kalshi — $363M (+21.3%)",
+        "variant": "caption"
+      }
+    },
+    "sep7": {
+      "type": "Separator",
+      "props": {}
+    },
+    "stables_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "stables_heading",
+        "stables_stat",
+        "stables_breakdown"
+      ]
+    },
+    "stables_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Stables",
+        "level": "h3"
+      }
+    },
+    "stables_stat": {
+      "type": "Stat",
+      "props": {
+        "value": "$311.0B",
+        "delta": "flat — no notable single-issuer moves"
+      }
+    },
+    "stables_breakdown": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "sb1",
+        "sb2",
+        "sb3"
+      ]
+    },
+    "sb1": {
+      "type": "Text",
+      "props": {
+        "text": "USDT — $184.1B",
+        "variant": "caption"
+      }
+    },
+    "sb2": {
+      "type": "Text",
+      "props": {
+        "text": "USDC — $73.4B",
+        "variant": "caption"
+      }
+    },
+    "sb3": {
+      "type": "Text",
+      "props": {
+        "text": "USDe — $3.9B",
+        "variant": "caption"
+      }
+    },
+    "sep8": {
+      "type": "Separator",
+      "props": {}
+    },
+    "real_yield_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "ry_heading",
+        "ry1",
+        "ry2",
+        "ry3"
+      ]
+    },
+    "ry_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Real yield (sustainable, ≥$10M, filtered)",
+        "level": "h3"
+      }
+    },
+    "ry1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "ry1_title",
+        "ry1_stats"
+      ]
+    },
+    "ry1_title": {
+      "type": "Text",
+      "props": {
+        "text": "• REUSDE (re, ETH)",
+        "variant": "body"
+      }
+    },
+    "ry1_stats": {
+      "type": "Text",
+      "props": {
+        "text": "22.9% apyBase · $20M TVL",
+        "variant": "caption"
+      }
+    },
+    "ry2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "ry2_title",
+        "ry2_stats"
+      ]
+    },
+    "ry2_title": {
+      "type": "Text",
+      "props": {
+        "text": "• WETH-USDT (Uniswap V3, ETH)",
+        "variant": "body"
+      }
+    },
+    "ry2_stats": {
+      "type": "Text",
+      "props": {
+        "text": "14.7% apyBase · $86M TVL",
+        "variant": "caption"
+      }
+    },
+    "ry3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "ry3_title",
+        "ry3_stats"
+      ]
+    },
+    "ry3_title": {
+      "type": "Text",
+      "props": {
+        "text": "• ETH-USDC (GMX V2, Arbitrum)",
+        "variant": "body"
+      }
+    },
+    "ry3_stats": {
+      "type": "Text",
+      "props": {
+        "text": "12.9% apyBase · $40M TVL",
+        "variant": "caption"
+      }
+    },
+    "sep9": {
+      "type": "Separator",
+      "props": {}
+    },
+    "incentive_yield_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "iy_heading",
+        "iy1",
+        "iy2"
+      ]
+    },
+    "iy_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Incentive yield (points/emissions, ≥$25M)",
+        "level": "h3"
+      }
+    },
+    "iy1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "iy1_title",
+        "iy1_stats"
+      ]
+    },
+    "iy1_title": {
+      "type": "Text",
+      "props": {
+        "text": "• USDC-AERO (Aerodrome, Base)",
+        "variant": "body"
+      }
+    },
+    "iy1_stats": {
+      "type": "Text",
+      "props": {
+        "text": "24.4% apy via AERO rewards · $31M TVL",
+        "variant": "caption"
+      }
+    },
+    "iy2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "iy2_title",
+        "iy2_stats"
+      ]
+    },
+    "iy2_title": {
+      "type": "Text",
+      "props": {
+        "text": "• USDS (Sky Lending, ETH)",
+        "variant": "body"
+      }
+    },
+    "iy2_stats": {
+      "type": "Text",
+      "props": {
+        "text": "9.6% apy via SKY rewards · $280M TVL",
+        "variant": "caption"
+      }
+    },
+    "sep10": {
+      "type": "Separator",
+      "props": {}
+    },
+    "macro_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "macro_heading",
+        "macro_data"
+      ]
+    },
+    "macro_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Macro",
+        "level": "h3"
+      }
+    },
+    "macro_data": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "btc_stat",
+        "eth_stat",
+        "fng_stat",
+        "breadth_text",
+        "hot_mkt_text"
+      ]
+    },
+    "btc_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "BTC",
+        "value": "$64,091",
+        "delta": "−0.5%"
+      }
+    },
+    "eth_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "ETH",
+        "value": "$1,798",
+        "delta": "+0.0%"
+      }
+    },
+    "fng_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Fear & Greed",
+        "value": "26 (Fear)",
+        "delta": "↑ from 23 Extreme Fear"
+      }
+    },
+    "breadth_text": {
+      "type": "Text",
+      "props": {
+        "text": "Breadth: 12/20",
+        "variant": "caption"
+      }
+    },
+    "hot_mkt_text": {
+      "type": "Text",
+      "props": {
+        "text": "Hot market: \"Will Spain win FIFA 2026?\" YES 21%",
+        "variant": "caption"
+      }
+    },
+    "sep11": {
+      "type": "Separator",
+      "props": {}
+    },
+    "sources_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "sources_heading",
+        "sources_text"
+      ]
+    },
+    "sources_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Data sources",
+        "level": "h4"
+      }
+    },
+    "sources_text": {
+      "type": "Text",
+      "props": {
+        "text": "chains=ok · dex=ok · fees=ok · stables=ok · yields=ok · coingecko=ok · fng=ok · polymarket=ok · websearch=fail",
+        "variant": "caption"
+      }
+    }
+  }
+}
