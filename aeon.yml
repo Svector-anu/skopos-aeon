@@ -32,7 +32,7 @@ skills:
   ctrl: { enabled: false, schedule: "workflow_dispatch", var: "" } # var: natural-language workflow (e.g. "DCA 0.005 ETH into USDC weekly") — compiles a trigger→action graph into a CTRL V3 vault on Base via the live /api/mcp REST API, hands the user a one-shot signUrl. Agent never signs; the wallet signs an EIP-5792 batch once, the keeper executes after under per-swap/per-day caps. Operator-initiated only. No API key needed (anonymous create; wallet signature is the trust boundary).
 
   monitor-polymarket: { enabled: false, schedule: "30 12 * * *", var: "" } # prediction-market monitor (Polymarket + Kalshi) — 24h moves, volume, comments, conviction alerts. var: empty=both | polymarket | kalshi | polymarket:<slug> | kalshi:<ticker>
-  token-pick: { enabled: false, schedule: "0 12 * * *" }
+  token-pick: { enabled: true, schedule: "0 12 * * *" }
   price-alert: { enabled: false, schedule: "*/30 * * * *", var: "" } # every 30 minutes — fire on tracked-token ATH, ±20% 1h move, or operator-set target crossing (var=target_price,target_price2,...). Silent on normal runs. Set var=dry-run to skip notify.
   narrative-tracker: { enabled: true, schedule: "30 */6 * * *" } # track rising/peaking/fading narratives
   unlock-monitor: { enabled: false, schedule: "0 10 * * 1" } # weekly token unlock/vesting tracker
@@ -70,7 +70,7 @@ skills:
 
   # --- Evening / meta (6 PM UTC) ---
   strategy-builder: { enabled: false, schedule: "workflow_dispatch", var: "" } # on-demand — draft STRATEGY.md (north-star / priorities / audience / constraints) from a brief + repo README + memory. var: bare goal text, or structured brief "repo=owner/repo | links=url1,url2 | goal=free text". Powers the dashboard Strategy → Build my strategy button. No API key needed.
-  skill-health: { enabled: false, schedule: "0 18 * * *", var: "" } # self-healing health audit + analytics. var: empty=health (files/resolves issues) | <skill>=single | analytics[:hours]=fleet run/pass-rate metrics (folds in skill-analytics)
+  skill-health: { enabled: true, schedule: "0 18 * * *", var: "" } # self-healing health audit + analytics. var: empty=health (files/resolves issues) | <skill>=single | analytics[:hours]=fleet run/pass-rate metrics (folds in skill-analytics)
 
   self-improve: { enabled: false, schedule: "0 18 1/2 * *", var: "" } # every other day — improve the agent, or audit it. var: empty/improve[:focus]=propose+apply one fix | audit[:focus]=review what ran/failed (folds in self-review)
 
@@ -116,7 +116,7 @@ skills:
   # Infra & health
   # Markets & crypto
   fear-divergence: { enabled: true, schedule: "30 7 * * *" } # daily 07:30 UTC — conditional: fires only when Fear & Greed < 25; surfaces assets diverging from the BTC drawdown with narrative catalysts from memory; silent skip otherwise. Reads market-context.md (enable market-context first).
-  picks-tracker: { enabled: false, schedule: "0 9 * * 0" } # Sunday 09:00 UTC — 30-day retrospective scoring token + prediction-market picks from logs against current prices; W/H/L + hit rate; honest record-keeping. Pairs with token-pick / monitor-polymarket.
+  picks-tracker: { enabled: true, schedule: "0 9 * * 0" } # Sunday 09:00 UTC — 30-day retrospective scoring token + prediction-market picks from logs against current prices; W/H/L + hit rate; honest record-keeping. Pairs with token-pick / monitor-polymarket.
   # Content pipeline
   soul-builder: { enabled: false, schedule: "workflow_dispatch", var: "" } # on-demand — build a SOUL from any mix of sources (X handle, full name, links), drafting soul/SOUL.md + STYLE.md + examples so every content skill speaks in that voice. var: bare X handle, or structured brief "x=handle | name=Full Name | links=url1,url2". Powers the dashboard Soul → Build my soul button. XAI_API_KEY optional (name/links use built-in WebSearch/WebFetch).
   # Social
