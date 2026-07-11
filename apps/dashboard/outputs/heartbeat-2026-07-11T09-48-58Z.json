@@ -1,0 +1,350 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Heartbeat Status"
+      },
+      "children": [
+        "alert_critical_failures",
+        "sep1",
+        "failed_skills_section",
+        "sep2",
+        "watch_section",
+        "sep3",
+        "root_cause_section",
+        "sep4",
+        "status_section"
+      ]
+    },
+    "alert_critical_failures": {
+      "type": "Alert",
+      "props": {
+        "type": "error",
+        "title": "🔴 FAILED",
+        "message": "3 skills with critical consecutive failures"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "failed_skills_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heartbeat_item",
+        "defi_overview_item",
+        "narrative_tracker_item"
+      ]
+    },
+    "heartbeat_item": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heartbeat_name",
+        "heartbeat_stats"
+      ]
+    },
+    "heartbeat_name": {
+      "type": "Text",
+      "props": {
+        "text": "heartbeat",
+        "variant": "lead"
+      }
+    },
+    "heartbeat_stats": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "heartbeat_consecutive",
+        "heartbeat_rate",
+        "heartbeat_critical"
+      ]
+    },
+    "heartbeat_consecutive": {
+      "type": "Stat",
+      "props": {
+        "label": "Consecutive failures",
+        "value": "15"
+      }
+    },
+    "heartbeat_rate": {
+      "type": "Stat",
+      "props": {
+        "label": "Pass rate",
+        "value": "0%"
+      }
+    },
+    "heartbeat_critical": {
+      "type": "Badge",
+      "props": {
+        "text": "self-check critical",
+        "variant": "destructive"
+      }
+    },
+    "defi_overview_item": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "defi_name",
+        "defi_stats"
+      ]
+    },
+    "defi_name": {
+      "type": "Text",
+      "props": {
+        "text": "defi-overview",
+        "variant": "lead"
+      }
+    },
+    "defi_stats": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "defi_consecutive",
+        "defi_rate"
+      ]
+    },
+    "defi_consecutive": {
+      "type": "Stat",
+      "props": {
+        "label": "Consecutive failures",
+        "value": "22"
+      }
+    },
+    "defi_rate": {
+      "type": "Stat",
+      "props": {
+        "label": "Pass rate",
+        "value": "8%"
+      }
+    },
+    "narrative_tracker_item": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "narrative_name",
+        "narrative_stats"
+      ]
+    },
+    "narrative_name": {
+      "type": "Text",
+      "props": {
+        "text": "narrative-tracker",
+        "variant": "lead"
+      }
+    },
+    "narrative_stats": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "narrative_consecutive",
+        "narrative_rate"
+      ]
+    },
+    "narrative_consecutive": {
+      "type": "Stat",
+      "props": {
+        "label": "Consecutive failures",
+        "value": "20"
+      }
+    },
+    "narrative_rate": {
+      "type": "Stat",
+      "props": {
+        "label": "Pass rate",
+        "value": "9%"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "watch_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "watch_header",
+        "fear_divergence_item"
+      ]
+    },
+    "watch_header": {
+      "type": "Heading",
+      "props": {
+        "text": "🟡 WATCH",
+        "level": "h3"
+      }
+    },
+    "fear_divergence_item": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "fear_div_name",
+        "fear_div_stats"
+      ]
+    },
+    "fear_div_name": {
+      "type": "Text",
+      "props": {
+        "text": "fear-divergence",
+        "variant": "lead"
+      }
+    },
+    "fear_div_stats": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "fear_div_today",
+        "fear_div_was"
+      ]
+    },
+    "fear_div_today": {
+      "type": "Stat",
+      "props": {
+        "label": "Failures today",
+        "value": "1"
+      }
+    },
+    "fear_div_was": {
+      "type": "Stat",
+      "props": {
+        "label": "Previous rate",
+        "value": "50%"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "root_cause_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "root_cause_heading",
+        "root_cause_alert",
+        "root_cause_detail",
+        "action_heading",
+        "action_list"
+      ]
+    },
+    "root_cause_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Root Cause",
+        "level": "h3"
+      }
+    },
+    "root_cause_alert": {
+      "type": "Alert",
+      "props": {
+        "type": "warning",
+        "title": "Bankr gateway not connecting",
+        "message": "All today's failures show 0 input/output tokens"
+      }
+    },
+    "root_cause_detail": {
+      "type": "Text",
+      "props": {
+        "text": "All today's failures show 0 input/output tokens — bankr gateway not connecting.",
+        "variant": "body"
+      }
+    },
+    "action_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Action required",
+        "level": "h4"
+      }
+    },
+    "action_list": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "action_1",
+        "action_2"
+      ]
+    },
+    "action_1": {
+      "type": "Text",
+      "props": {
+        "text": "Check ANTHROPIC_API_KEY",
+        "variant": "body"
+      }
+    },
+    "action_2": {
+      "type": "Text",
+      "props": {
+        "text": "Check GATEWAY_ORDER or bankr status",
+        "variant": "body"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {}
+    },
+    "status_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "status_badge",
+        "status_update"
+      ]
+    },
+    "status_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "STATUS_PAGE=DEGRADED",
+        "variant": "outline"
+      }
+    },
+    "status_update": {
+      "type": "Link",
+      "props": {
+        "label": "docs/status.md updated",
+        "href": "docs/status.md"
+      }
+    }
+  }
+}
