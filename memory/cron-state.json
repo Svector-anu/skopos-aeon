@@ -79,5 +79,15 @@
     "consecutive_failures": 0,
     "success_rate": 1,
     "last_quality_score": 3
+  },
+  "token-pick": {
+    "last_status": "success",
+    "last_success": "2026-07-11T11:57:58Z",
+    "total_runs": 1,
+    "total_successes": 1,
+    "total_failures": 0,
+    "consecutive_failures": 0,
+    "success_rate": 1,
+    "last_quality_score": 4
   }
 }
