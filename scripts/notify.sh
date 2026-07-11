@@ -33,6 +33,9 @@ FORCE_REPLY=""      # --force-reply: prompt the user's next message as a reply
 PLACEHOLDER=""      # --placeholder: input_field_placeholder for force_reply
 CONTEXT=""          # --context "skill::intent": marker the poller reads back on reply
 MUTE_KEY=""         # --mute-key "skill:arg": suppress if muted/snoozed (memory/*.log)
+NO_JSONRENDER=""    # --no-jsonrender: skip the .pending-${SKILL_NAME}.md write for this
+                    # call — for a skill that sends a follow-up notify (e.g. a force-reply
+                    # offer) after its real content, so the follow-up doesn't clobber it
 have_body=false
 while [ $# -gt 0 ]; do
   case "$1" in
@@ -50,6 +53,7 @@ while [ $# -gt 0 ]; do
     --placeholder) PLACEHOLDER="${2:-}"; shift 2 ;;
     --context)     CONTEXT="${2:-}"; shift 2 ;;
     --mute-key)    MUTE_KEY="${2:-}"; shift 2 ;;
+    --no-jsonrender) NO_JSONRENDER=1; shift ;;
     *)             if [ "$have_body" = false ]; then MSG="$1"; have_body=true; fi; shift ;;
   esac
 done
@@ -265,8 +269,10 @@ if [ -n "${SENDGRID_API_KEY:-}" ] && [ -n "${NOTIFY_EMAIL_TO:-}" ]; then
           '{personalizations:[{to:[{email:$to}]}],from:{email:$from},subject:$subject,content:[{type:"text/plain",value:$text},{type:"text/html",value:$html}]}')" > /dev/null 2>&1 || true
 fi
 
-# json-render channel — save raw message for post-run conversion
-if [ "${JSONRENDER_ENABLED:-false}" = "true" ] && [ -n "${SKILL_NAME:-}" ]; then
+# json-render channel — save raw message for post-run conversion. Skipped when
+# --no-jsonrender is set, so a skill's own follow-up notify (sent after its real
+# content, e.g. token-pick's deep-dive offer) doesn't overwrite the real capture.
+if [ "${JSONRENDER_ENABLED:-false}" = "true" ] && [ -n "${SKILL_NAME:-}" ] && [ -z "$NO_JSONRENDER" ]; then
   mkdir -p apps/dashboard/outputs
   printf '%s' "$PLAIN" > "apps/dashboard/outputs/.pending-${SKILL_NAME}.md"
 fi

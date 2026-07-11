@@ -137,12 +137,13 @@ If all sources failed, send `TOKEN_PICK_NO_DATA` with the source-status line —
 
 ### 6c. Offer a deep-dive (force-reply — normal-day only)
 
-Only after a **normal-day** send (6a) — never on the skip-day (6b) or the no-data path (weak signals → no pick, so no offer). This skill is `read-only`, so it can't run the deep report itself; instead it offers to hand off to **token-movers** (write mode), which owns the single-token deep report and the `deep-dive:` handler. Because `force_reply` and inline buttons can't share one message, send this as a SEPARATE `./notify` AFTER the 6a pick:
+Only after a **normal-day** send (6a) — never on the skip-day (6b) or the no-data path (weak signals → no pick, so no offer). This skill is `read-only`, so it can't run the deep report itself; instead it offers to hand off to **token-movers** (write mode), which owns the single-token deep report and the `deep-dive:` handler. Because `force_reply` and inline buttons can't share one message, send this as a SEPARATE `./notify` AFTER the 6a pick — with `--no-jsonrender`, since without it this second notify would overwrite the real 6a pick capture that downstream consumers (e.g. `output/.chains/token-pick.md`) read from:
 
 ```bash
 ./notify "Want a deeper report on a token? Reply with a ticker or contract." \
   --force-reply --placeholder "e.g. WIF" \
-  --context "token-movers::deep-dive"
+  --context "token-movers::deep-dive" \
+  --no-jsonrender
 ```
 
 The `token-movers::deep-dive` marker routes the operator's reply to **token-movers** as `var="deep-dive:<their text>"`; token-movers strips the `deep-dive:` prefix and produces the single-token deep report.
