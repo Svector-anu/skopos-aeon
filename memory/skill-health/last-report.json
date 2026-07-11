@@ -1,0 +1,13 @@
+{
+  "hash": "220021d215e66e8d61a00045e5b82fcaf792728b50bd513fa69a0ac9ad3e1899",
+  "last_notified_at": "2026-07-11T18:00:00Z",
+  "last_run_at": "2026-07-11T18:00:00Z",
+  "classification": {
+    "critical": [],
+    "degraded": ["defi-overview", "heartbeat", "narrative-tracker"],
+    "flapping": [],
+    "warning": ["fear-divergence"],
+    "healthy_count": 3,
+    "no_data": ["skill-health"]
+  }
+}

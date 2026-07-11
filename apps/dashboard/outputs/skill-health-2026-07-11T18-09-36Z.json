@@ -1,0 +1,357 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Skill Health 2026-07-11",
+        "description": "Health monitoring for Aeon skills"
+      },
+      "children": [
+        "status_alert",
+        "sep1",
+        "degraded_section",
+        "sep2",
+        "warning_section",
+        "sep3",
+        "nodata_section",
+        "sep4",
+        "healthy_section",
+        "sep5",
+        "stats_section"
+      ]
+    },
+    "status_alert": {
+      "type": "Alert",
+      "props": {
+        "title": "HEALTH: DEGRADED(3)",
+        "message": "systemic: bankr gateway failure — 3 skills recovered today",
+        "type": "warning"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "degraded_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "degraded_heading",
+        "skill_heartbeat",
+        "skill_defi",
+        "skill_narrative"
+      ]
+    },
+    "degraded_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "🟡 DEGRADED",
+        "level": "h3"
+      }
+    },
+    "skill_heartbeat": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "skill_heartbeat_name",
+        "skill_heartbeat_progress",
+        "skill_heartbeat_details"
+      ]
+    },
+    "skill_heartbeat_name": {
+      "type": "Text",
+      "props": {
+        "text": "heartbeat",
+        "variant": "lead"
+      }
+    },
+    "skill_heartbeat_progress": {
+      "type": "Progress",
+      "props": {
+        "value": 6,
+        "max": 100,
+        "label": "6% success (16 runs)"
+      }
+    },
+    "skill_heartbeat_details": {
+      "type": "Text",
+      "props": {
+        "text": "WAIT-API (bankr gateway outage, input_tokens=0); recovered today (last_success 09:49Z)",
+        "variant": "caption"
+      }
+    },
+    "skill_defi": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "skill_defi_name",
+        "skill_defi_progress",
+        "skill_defi_details"
+      ]
+    },
+    "skill_defi_name": {
+      "type": "Text",
+      "props": {
+        "text": "defi-overview",
+        "variant": "lead"
+      }
+    },
+    "skill_defi_progress": {
+      "type": "Progress",
+      "props": {
+        "value": 15,
+        "max": 100,
+        "label": "15% success (26 runs)"
+      }
+    },
+    "skill_defi_details": {
+      "type": "Text",
+      "props": {
+        "text": "WAIT-API (bankr gateway outage); recovered today (last_success 12:47Z)",
+        "variant": "caption"
+      }
+    },
+    "skill_narrative": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "skill_narrative_name",
+        "skill_narrative_progress",
+        "skill_narrative_details"
+      ]
+    },
+    "skill_narrative_name": {
+      "type": "Text",
+      "props": {
+        "text": "narrative-tracker",
+        "variant": "lead"
+      }
+    },
+    "skill_narrative_progress": {
+      "type": "Progress",
+      "props": {
+        "value": 16,
+        "max": 100,
+        "label": "16% success (25 runs)"
+      }
+    },
+    "skill_narrative_details": {
+      "type": "Text",
+      "props": {
+        "text": "WAIT-API (bankr gateway outage); recovered today (last_success 12:46Z)",
+        "variant": "caption"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "warning_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "warning_heading",
+        "skill_fear"
+      ]
+    },
+    "warning_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "⚠️ WARNING",
+        "level": "h3"
+      }
+    },
+    "skill_fear": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "skill_fear_name",
+        "skill_fear_progress",
+        "skill_fear_details"
+      ]
+    },
+    "skill_fear_name": {
+      "type": "Text",
+      "props": {
+        "text": "fear-divergence",
+        "variant": "lead"
+      }
+    },
+    "skill_fear_progress": {
+      "type": "Progress",
+      "props": {
+        "value": 67,
+        "max": 100,
+        "label": "67% success (3 runs)"
+      }
+    },
+    "skill_fear_details": {
+      "type": "Text",
+      "props": {
+        "text": "monitor (1 failure on 2026-07-11, since recovered)",
+        "variant": "caption"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "nodata_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "nodata_heading",
+        "skill_nodata"
+      ]
+    },
+    "nodata_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "⚪ NO DATA (1)",
+        "level": "h3"
+      }
+    },
+    "skill_nodata": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "skill_nodata_name",
+        "skill_nodata_details"
+      ]
+    },
+    "skill_nodata_name": {
+      "type": "Text",
+      "props": {
+        "text": "skill-health",
+        "variant": "lead"
+      }
+    },
+    "skill_nodata_details": {
+      "type": "Text",
+      "props": {
+        "text": "DISPATCH-SKILL (no cron-state entry for self)",
+        "variant": "caption"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "healthy_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "healthy_heading",
+        "healthy_list"
+      ]
+    },
+    "healthy_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "🟢 HEALTHY: 3",
+        "level": "h3"
+      }
+    },
+    "healthy_list": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "healthy_token",
+        "healthy_x402",
+        "healthy_picks"
+      ]
+    },
+    "healthy_token": {
+      "type": "Badge",
+      "props": {
+        "text": "token-pick",
+        "variant": "default"
+      }
+    },
+    "healthy_x402": {
+      "type": "Badge",
+      "props": {
+        "text": "x402-monitor",
+        "variant": "default"
+      }
+    },
+    "healthy_picks": {
+      "type": "Badge",
+      "props": {
+        "text": "picks-tracker",
+        "variant": "default"
+      }
+    },
+    "sep5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stats_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "stat_issues",
+        "stat_resolved"
+      ]
+    },
+    "stat_issues": {
+      "type": "Stat",
+      "props": {
+        "label": "Open issues",
+        "value": "0"
+      }
+    },
+    "stat_resolved": {
+      "type": "Stat",
+      "props": {
+        "label": "Resolved this run",
+        "value": "0"
+      }
+    }
+  }
+}
