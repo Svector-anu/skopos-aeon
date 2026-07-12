@@ -25,14 +25,14 @@
     "last_error": "andard\",\"cache_creation\":{\"ephemeral_1h_input_tokens\":0,\"ephemeral_5m_input_tokens\":36945},\"inference_geo\":\"\",\"iterations\":[],\"speed\":\"standard\"},\"modelUsage\":{\"claude-sonnet-4-6\":{\"inputTokens\":2,\"ou"
   },
   "narrative-tracker": {
-    "last_status": "dispatched",
-    "last_failed": "2026-07-12T01:15:09Z",
-    "total_runs": 27,
+    "last_status": "failed",
+    "last_failed": "2026-07-12T04:41:51Z",
+    "total_runs": 28,
     "total_successes": 5,
-    "total_failures": 22,
-    "consecutive_failures": 1,
-    "success_rate": 0.19,
-    "last_error": "abf1454\",\"total_cost_usd\":0,\"usage\":{\"input_tokens\":0,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":0,\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\"",
+    "total_failures": 23,
+    "consecutive_failures": 2,
+    "success_rate": 0.18,
+    "last_error": "a99713c\",\"total_cost_usd\":0,\"usage\":{\"input_tokens\":0,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":0,\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\"",
     "last_success": "2026-07-11T19:27:44Z",
     "last_quality_score": 4,
     "last_dispatch": "2026-07-12T04:41:34Z"
