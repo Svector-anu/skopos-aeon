@@ -50,15 +50,15 @@
   "fear-divergence": {
     "last_status": "failed",
     "last_success": "2026-07-11T09:48:56Z",
-    "total_runs": 51,
+    "total_runs": 53,
     "total_successes": 2,
-    "total_failures": 49,
-    "consecutive_failures": 48,
+    "total_failures": 51,
+    "consecutive_failures": 50,
     "success_rate": 0.04,
     "last_quality_score": 3,
     "last_dispatch": "2026-07-13T15:22:44Z",
-    "last_failed": "2026-07-14T22:34:04Z",
-    "last_error": "be7d6b0\",\"total_cost_usd\":0,\"usage\":{\"input_tokens\":0,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":0,\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\""
+    "last_failed": "2026-07-14T23:28:09Z",
+    "last_error": "5f15751\",\"total_cost_usd\":0,\"usage\":{\"input_tokens\":0,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":0,\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\""
   },
   "x402-monitor": {
     "last_status": "failed",
