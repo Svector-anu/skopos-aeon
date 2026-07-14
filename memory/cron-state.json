@@ -61,14 +61,16 @@
     "last_error": "fde903c\",\"total_cost_usd\":0,\"usage\":{\"input_tokens\":0,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":0,\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\""
   },
   "x402-monitor": {
-    "last_status": "success",
+    "last_status": "failed",
     "last_success": "2026-07-08T13:27:13Z",
-    "total_runs": 1,
+    "total_runs": 2,
     "total_successes": 1,
-    "total_failures": 0,
-    "consecutive_failures": 0,
-    "success_rate": 1,
-    "last_quality_score": 4
+    "total_failures": 1,
+    "consecutive_failures": 1,
+    "success_rate": 0.5,
+    "last_quality_score": 4,
+    "last_failed": "2026-07-14T12:20:21Z",
+    "last_error": "8f60ff2\",\"total_cost_usd\":0,\"usage\":{\"input_tokens\":0,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":0,\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\""
   },
   "picks-tracker": {
     "last_status": "failed",
