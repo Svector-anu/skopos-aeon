@@ -102,12 +102,12 @@
     "last_dispatch": "2026-07-13T03:48:24Z",
     "last_status": "failed",
     "last_success": "2026-07-11T18:10:16Z",
-    "total_runs": 45,
+    "total_runs": 46,
     "total_successes": 1,
-    "total_failures": 44,
-    "consecutive_failures": 44,
+    "total_failures": 45,
+    "consecutive_failures": 45,
     "success_rate": 0.02,
-    "last_failed": "2026-07-15T17:25:25Z",
-    "last_error": "77ddbe3\",\"total_cost_usd\":0,\"usage\":{\"input_tokens\":0,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":0,\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\""
+    "last_failed": "2026-07-15T18:36:16Z",
+    "last_error": "09b1470\",\"total_cost_usd\":0,\"usage\":{\"input_tokens\":0,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":0,\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\""
   }
 }
