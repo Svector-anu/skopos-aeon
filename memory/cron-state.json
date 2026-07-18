@@ -63,14 +63,14 @@
   "x402-monitor": {
     "last_status": "failed",
     "last_success": "2026-07-08T13:27:13Z",
-    "total_runs": 90,
+    "total_runs": 92,
     "total_successes": 1,
-    "total_failures": 89,
-    "consecutive_failures": 89,
+    "total_failures": 91,
+    "consecutive_failures": 91,
     "success_rate": 0.01,
     "last_quality_score": 4,
-    "last_failed": "2026-07-18T12:11:47Z",
-    "last_error": "503b483\",\"total_cost_usd\":0,\"usage\":{\"input_tokens\":0,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":0,\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\""
+    "last_failed": "2026-07-18T13:46:54Z",
+    "last_error": "0e95070\",\"total_cost_usd\":0,\"usage\":{\"input_tokens\":0,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":0,\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\""
   },
   "picks-tracker": {
     "last_status": "failed",
