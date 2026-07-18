@@ -2,13 +2,13 @@
   "heartbeat": {
     "last_dispatch": "2026-07-13T15:22:44Z",
     "last_status": "failed",
-    "last_failed": "2026-07-18T05:41:29Z",
-    "total_runs": 125,
+    "last_failed": "2026-07-18T07:18:39Z",
+    "total_runs": 126,
     "total_successes": 1,
-    "total_failures": 124,
-    "consecutive_failures": 109,
+    "total_failures": 125,
+    "consecutive_failures": 110,
     "success_rate": 0.01,
-    "last_error": "bb77962\",\"total_cost_usd\":0,\"usage\":{\"input_tokens\":0,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":0,\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\"",
+    "last_error": "2f71c79\",\"total_cost_usd\":0,\"usage\":{\"input_tokens\":0,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":0,\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\"",
     "last_success": "2026-07-11T09:49:29Z"
   },
   "defi-overview": {
