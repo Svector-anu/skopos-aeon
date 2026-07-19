@@ -1,15 +1,9 @@
 {
   "skill": "token-pick",
-  "last_analyzed": "2026-07-11T12:47:54Z",
+  "last_analyzed": "2026-07-19T18:35:15Z",
   "quality_score": 4,
-  "assessment": "Substantive token pick with transparent scoring, concrete catalyst, identified risks, and graceful data-source fallbacks. Actionable and well-sourced despite minor permission issue on log write.",
+  "assessment": "Substantive dual pick with scored token, unlock risk, FedWatch edge, and liquidity/dedup gates applied cleanly.",
   "flags": [],
-  "last_analyzed": "2026-07-11T12:57:13Z",
-  "quality_score": 4,
-  "assessment": "Good, substantive analysis with clear position calls and risk disclosure; transparently noted DexScreener data failure but scoring defensible given available sources",
-  "flags": [
-    "source_degradation"
-  ],
   "avg_score": 4,
   "history": [
     {
@@ -18,6 +12,10 @@
     },
     {
       "date": "2026-07-11",
+      "score": 4
+    },
+    {
+      "date": "2026-07-19",
       "score": 4
     }
   ]
