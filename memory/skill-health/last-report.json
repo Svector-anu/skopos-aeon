@@ -1,13 +1,21 @@
 {
-  "hash": "220021d215e66e8d61a00045e5b82fcaf792728b50bd513fa69a0ac9ad3e1899",
-  "last_notified_at": "2026-07-11T18:00:00Z",
-  "last_run_at": "2026-07-11T18:00:00Z",
+  "hash": "98314f1fe1772cb520f43850971751285a4a126f1f00336d52266417392d125c",
+  "last_notified_at": "2026-07-19T18:33:57Z",
+  "last_run_at": "2026-07-19T18:33:57Z",
   "classification": {
-    "critical": [],
-    "degraded": ["defi-overview", "heartbeat", "narrative-tracker"],
+    "critical": [
+      "fear-divergence",
+      "picks-tracker",
+      "narrative-tracker",
+      "x402-monitor",
+      "token-pick",
+      "skill-health",
+      "defi-overview"
+    ],
+    "degraded": ["heartbeat"],
     "flapping": [],
-    "warning": ["fear-divergence"],
-    "healthy_count": 3,
-    "no_data": ["skill-health"]
+    "warning": [],
+    "healthy_count": 0,
+    "no_data": ["github-trending", "price-alert", "digest"]
   }
 }
