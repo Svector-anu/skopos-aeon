@@ -13,17 +13,13 @@ export const MODELS = [
 ]
 
 // Models offered when the Grok (`grok`) harness is selected.
-// - grok-composer-2.5-fast (grok's default) — fast single-agent, runs cleanly in CI.
-// - grok-build — reasoning/multi-agent coding model. It used to Cancel every run in
-//   the Actions sandbox (its subagent-spawn tool was denied); run-grok.sh now passes
-//   --no-subagents by default, so it runs single-agent in CI. Skills that opt into
-//   best_of_n:/verify: get subagents back automatically.
-// Use the bare CLI id (grok-build), not the API id (grok-build-0.1).
+// grok-composer-2.5-fast and grok-build were retired by the installed CLI
+// (@xai-official/grok) — both now 422 with "unknown model id". grok-4.5 is
+// the only id `grok models` reports as available as of CLI 0.2.82.
 // Keep this list in sync with the workflow_dispatch `model` choice options in
 // .github/workflows/aeon.yml — a mismatch 422s at dispatch time.
 export const GROK_MODELS = [
-  { id: 'grok-composer-2.5-fast', label: 'Composer 2.5' },
-  { id: 'grok-build', label: 'Grok Build' },
+  { id: 'grok-4.5', label: 'Grok 4.5' },
 ]
 
 // Harnesses (agent CLIs). `claude` = Claude Code (default, uses the AI Gateway),

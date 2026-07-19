@@ -25,8 +25,7 @@ on:
           - claude-sonnet-5
           - claude-sonnet-4-6
           - claude-haiku-4-5-20251001
-          - grok-composer-2.5-fast
-          - grok-build
+          - grok-4.5
       harness:
         description: 'Agent harness'
         required: false
@@ -366,10 +365,10 @@ jobs:
           fi
           if [ "$HARNESS" != "grok" ]; then HARNESS="claude"; fi   # unknown value → safe default (use `if`, not `&&`, under set -e)
           # On the grok harness a claude-* model id is meaningless — fall back to
-          # grok's default (grok-composer-2.5-fast) unless an explicit grok model
-          # was chosen. run-grok.sh omits --model for a non-grok value as a safety net.
+          # grok's default (grok-4.5) unless an explicit grok model was chosen.
+          # run-grok.sh omits --model for a non-grok value as a safety net.
           if [ "$HARNESS" = "grok" ]; then
-            case "$MODEL" in claude-*|"") MODEL="grok-composer-2.5-fast" ;; esac
+            case "$MODEL" in claude-*|"") MODEL="grok-4.5" ;; esac
           fi
           echo "Using harness: $HARNESS  |  model: $MODEL"
           echo "SKILL_MODEL=$MODEL" >> "$GITHUB_OUTPUT"
