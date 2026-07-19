@@ -43,7 +43,6 @@ skills:
   last30: { enabled: false, schedule: "workflow_dispatch", var: "" } # on-demand — cross-platform 30-day social research
   search-skill: { enabled: false, schedule: "0 14 * * *" }
 
-
   # --- Repo intelligence (3 PM UTC) ---
   star-milestone: { enabled: false, schedule: "15 15 * * *", var: "" } # daily — star milestone crossings + next-milestone projection & Show HN launch-window alert (folds in star-momentum). var: empty=all | owner/repo | dry-run
   repo-scanner: { enabled: false, schedule: "0 15 * * 0", var: "" } # GitHub fleet intel: repo catalog + per-repo action ideas + who's-building map (folds in repo-actions/builder-map). var: empty/<owner>=full | catalog[:owner] | actions[:focus] | builders
@@ -218,7 +217,7 @@ harness: claude
 # + secret ANTHROPIC_API_KEY. Example: https://api.deepseek.com/anthropic
 # Bankr docs: https://docs.bankr.bot/llm-gateway/overview
 gateway:
-  provider: bankr
+  provider: auto
 
 # Output channels
 channels:
