@@ -14,15 +14,15 @@
   "defi-overview": {
     "last_status": "failed",
     "last_success": "2026-07-11T18:12:55Z",
-    "total_runs": 142,
+    "total_runs": 143,
     "total_successes": 5,
-    "total_failures": 137,
-    "consecutive_failures": 115,
-    "success_rate": 0.04,
+    "total_failures": 138,
+    "consecutive_failures": 116,
+    "success_rate": 0.03,
     "last_quality_score": 4,
     "last_dispatch": "2026-07-13T15:22:44Z",
-    "last_failed": "2026-07-19T06:16:28Z",
-    "last_error": "2aba3d3\",\"total_cost_usd\":0,\"usage\":{\"input_tokens\":0,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":0,\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\""
+    "last_failed": "2026-07-19T08:34:57Z",
+    "last_error": "5baca20\",\"total_cost_usd\":0,\"usage\":{\"input_tokens\":0,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":0,\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\""
   },
   "narrative-tracker": {
     "last_status": "failed",
