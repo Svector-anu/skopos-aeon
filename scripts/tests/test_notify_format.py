@@ -52,6 +52,24 @@ class TestChunk(unittest.TestCase):
             self.assertIn(token, joined)
 
 
+class TestGfmToTelegramMd(unittest.TestCase):
+    def test_double_asterisk_bold_converted(self):
+        self.assertEqual(nf._gfm_to_telegram_md("**Status:** ok"), "*Status:* ok")
+
+    def test_double_underscore_bold_converted(self):
+        self.assertEqual(nf._gfm_to_telegram_md("__Status:__ ok"), "*Status:* ok")
+
+    def test_header_converted_to_bold_line(self):
+        self.assertEqual(nf._gfm_to_telegram_md("## Summary\nbody"), "*Summary*\nbody")
+
+    def test_fenced_code_left_untouched(self):
+        text = "before **bold**\n```\n**not bold** ## not a header\n```\nafter **bold**"
+        out = nf._gfm_to_telegram_md(text)
+        self.assertIn("**not bold** ## not a header", out)
+        self.assertNotIn("before **bold**", out)
+        self.assertIn("before *bold*", out)
+
+
 class TestChannels(unittest.TestCase):
     def test_telegram_adds_index_suffix_when_split(self):
         chunks = nf.telegram("p\n\n" + "x" * 9000, title="", severity="info", limit=3900)

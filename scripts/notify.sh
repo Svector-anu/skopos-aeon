@@ -224,8 +224,11 @@ if [ -n "${TELEGRAM_BOT_TOKEN:-}" ] && [ -n "${TELEGRAM_CHAT_ID:-}" ]; then
     if [ "$TG_HTTP" = "200" ] && [ "$TG_OK" = "true" ]; then
       DELIVERED=true
     else
-      # Fallback without parse_mode (Markdown parse errors) — keep the reply_markup.
-      TG_FALLBACK=$(jq -n --arg chat "$TELEGRAM_CHAT_ID" --arg text "$TG_MSG" --argjson rm "$TG_RM" \
+      # Fallback without parse_mode (Markdown parse errors) — strip markdown
+      # decoration too, otherwise raw *gibberish*/_underscores_/`backticks`/
+      # #headers show up literally in the chat instead of clean plain text.
+      TG_MSG_PLAIN=$(printf '%s' "$TG_MSG" | sed -E 's/[*_`]//g; s/^#{1,6} //g')
+      TG_FALLBACK=$(jq -n --arg chat "$TELEGRAM_CHAT_ID" --arg text "$TG_MSG_PLAIN" --argjson rm "$TG_RM" \
         '{chat_id:$chat, text:$text} + (if $rm then {reply_markup:$rm} else {} end)')
       curl -s -X POST "https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage" \
         -H "Content-Type: application/json" -d "$TG_FALLBACK" > /dev/null 2>&1 && DELIVERED=true || true

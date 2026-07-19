@@ -20,6 +20,7 @@ Two correctness properties this guarantees and the tests pin:
 import argparse
 import base64
 import json
+import re
 import sys
 
 SEVERITY = {
@@ -95,6 +96,24 @@ def chunk(text: str, limit: int):
     return _balance_fences(raw)
 
 
+def _gfm_to_telegram_md(text: str) -> str:
+    """Convert common GFM markdown to Telegram's legacy Markdown dialect.
+
+    parse_mode: Markdown only understands *bold*, _italic_, `code`, ```pre```,
+    and [text](url) - **bold**, __bold__, and #headers aren't entities to it,
+    so they risk an unmatched-asterisk parse error that falls back to a raw,
+    undecorated dump of the source syntax. Skip fenced code blocks - their
+    content should stay literal.
+    """
+    parts = text.split("```")
+    for i in range(0, len(parts), 2):  # even indices are outside fences
+        s = re.sub(r"\*\*(.+?)\*\*", r"*\1*", parts[i])
+        s = re.sub(r"__(.+?)__", r"*\1*", s)
+        s = re.sub(r"(?m)^#{1,6}[ \t]+(.+)$", r"*\1*", s)
+        parts[i] = s
+    return "```".join(parts)
+
+
 def _header(title, severity):
     meta = SEVERITY.get(severity, SEVERITY[DEFAULT_SEVERITY])
     if title:
@@ -105,7 +124,7 @@ def _header(title, severity):
 # ---- per-channel payload builders -----------------------------------------
 
 def telegram(text, title, severity, limit=3900):
-    body = text
+    body = _gfm_to_telegram_md(text)
     head = _header(title, severity)
     if head:
         body = head + "\n\n" + body
