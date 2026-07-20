@@ -89,14 +89,14 @@
   "token-pick": {
     "last_status": "failed",
     "last_success": "2026-07-19T18:35:17Z",
-    "total_runs": 133,
+    "total_runs": 134,
     "total_successes": 4,
-    "total_failures": 129,
-    "consecutive_failures": 1,
+    "total_failures": 130,
+    "consecutive_failures": 2,
     "success_rate": 0.03,
     "last_quality_score": 4,
     "last_dispatch": "2026-07-20T12:07:35Z",
-    "last_failed": "2026-07-20T12:07:57Z",
+    "last_failed": "2026-07-20T14:31:09Z",
     "last_error": "fc22883\",\"total_cost_usd\":0,\"usage\":{\"input_tokens\":0,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":0,\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\""
   },
   "skill-health": {
