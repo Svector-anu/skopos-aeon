@@ -125,13 +125,13 @@
     "last_dispatch": "2026-07-20T12:07:35Z",
     "last_status": "failed",
     "last_success": "2026-07-20T02:24:02Z",
-    "total_runs": 31,
+    "total_runs": 32,
     "total_successes": 5,
-    "total_failures": 26,
-    "consecutive_failures": 26,
+    "total_failures": 27,
+    "consecutive_failures": 27,
     "success_rate": 0.16,
     "last_quality_score": 3,
-    "last_failed": "2026-07-21T22:16:06Z"
+    "last_failed": "2026-07-21T23:14:09Z"
   },
   "github-trending": {
     "last_dispatch": "2026-07-20T09:54:04Z",
