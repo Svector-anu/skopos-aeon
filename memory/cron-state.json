@@ -50,14 +50,14 @@
   "fear-divergence": {
     "last_status": "failed",
     "last_success": "2026-07-19T18:33:19Z",
-    "total_runs": 218,
+    "total_runs": 219,
     "total_successes": 3,
-    "total_failures": 215,
-    "consecutive_failures": 64,
+    "total_failures": 216,
+    "consecutive_failures": 65,
     "success_rate": 0.01,
     "last_quality_score": 4,
     "last_dispatch": "2026-07-20T12:07:35Z",
-    "last_failed": "2026-07-24T00:11:09Z",
+    "last_failed": "2026-07-24T03:40:41Z",
     "last_error": "0a4f319\",\"total_cost_usd\":0,\"usage\":{\"input_tokens\":0,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":0,\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\""
   },
   "x402-monitor": {
